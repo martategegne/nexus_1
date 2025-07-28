@@ -1,39 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martin'a contacts</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta's Contacts</title> <!-- Corrected title for consistency -->
+
+  <!-- exetrnal css link goes here -->
+    <link rel="stylesheet" href="./styles/contact.css">
 </head>
 <body>
-    <a href="./index.html">home</a>
-  <a href="./about.html">about</a>
-  <a href="./contact.html">contacts</a>
-  <a href="./form.html">form</a>
-    <a href="./photos.html">photos</a>
-  <h2>this is my contacts page.</h2>
-  <h1>HERE YOU GO MY  CONTACT DETAILS!</h1>
-  <br>
- 
-  <br>
-  <img src="C:\NEXES_2025\portifolio-project\images\martina1.jpg" alt="a photo of me">
-  <br>
-  
-  <p><b>my email</b> <address>martategegne2015@gmail.com</address></p>
-  
-  <p><b>myphone number</b> <address>0980217490</address></p>
-  <h3>Thank you for visting my page!</h3>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./contact.html" class="nav-link active">Contacts</a></li> <!-- Added .active class -->
+                <li><a href="./form.html" class="nav-link">Form</a></li>
+                <li><a href="./photos.html" class="nav-link">Photos</a></li>
+                <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
+                <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
+                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
+                <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
+                <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
+                <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<form action=""></form>
+    <main class="container">
+        <h2>This is my contacts page.</h2>
+        <h1>HERE YOU GO MY CONTACT DETAILS!</h1>
 
+        <div class="contact-details">
+            <img src="./images/martina1.jpg" alt="A photo of Marta Tegegne Mamo" class="contact-photo">
+            <!-- IMPORTANT: Change the image path from C:\... to a relative path like ./images/martina1.jpg -->
 
+            <div class="contact-info">
+                <p><b>My Email:</b> <address>martategegne2015@gmail.com</address></p>
+                <p><b>My Phone Number:</b> <address>0980217490</address></p>
+            </div>
+        </div>
 
+        <h3>Thank you for visiting my page!</h3>
 
+        <!-- The empty form tag is still here, if you plan to add a form later, it should be structured properly -->
+        <form action=""></form>
 
+        <div class="page-navigation-links">
+            <a href="about.html" class="button-link">PREVIOUS PAGE (About)</a>
+        </div>
+    </main>
 
-
-
- <a href="about.html">PREVIOUS PAGE</a> 
+    <footer>
+        <!-- Consistent footer content for your portfolio -->
+        <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+        <address>Location: Addis Ababa, Ethiopia</address>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

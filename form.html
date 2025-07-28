@@ -1,65 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martin's form</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta's Form Example</title> <!-- More descriptive title -->
+    <!-- the external css link goes here -->
+     <link rel="stylesheet" href="./styles/form.css">
 </head>
 <body>
-   <a href="./index.html">home</a>
-  <a href="./about.html">about</a>
-  <a href="./contact.html">contacts</a>
-   <a href="./form.html">form</a>
-    <a href="./photos.html">photos</a>
-  <h1>my form</h1>
-  <form action="">
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./contact.html" class="nav-link">Contacts</a></li>
+                <li><a href="./form.html" class="nav-link active">Form</a></li> <!-- Added .active class -->
+                <li><a href="./photos.html" class="nav-link">Photos</a></li>
+                <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
+                <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
+                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
+                <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
+                <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
+                <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <input type="text" name="First name" placeholder="Enter your name">
-    <input type="number" name="Age" placeholder="Enter your Age">
-    <br>
-    <h5> choose your favorite fruit</h5>
-    <input type="radio" name="language" value="Mangoes" title="Mangoes"/>Mangoes
-    <br>
-    <input type="radio" name="language" value="Banana" title="Banana"/>Banana
-    <br>
-     <input type="radio" name="language" value="pineapple" title="pineapple"/>pineapple
-     <br>
-     <h5>choosse your favorite Speaking language</h5>
-   
-    <br>
+    <main class="container">
+        <h1>My Form Example</h1>
 
-    <input type="radio" name="language" value="Amharic" title="Amharic"/>Amharic
-    <br>
-    <input type="radio" name="language" value="English" title="English"/>English
-    <br>
-     <input type="radio" name="language" value="French" title="French"/>French
-     <br>
-<h3>How many of the following hobbies/intersts do you share?</h3>
-<input type="checkbox" name="language" value="Sports" title="Sports">Sports <br>
-<input type="checkbox" name="language" value="Music" title="Music">Music <br>
-<input type="checkbox" name="language" value="Reading" title="Reading">Reading <br>
-<input type="checkbox" name="language" value="Gaming" title="Gaming">Gaming <br>
-<br><br><br><br>
+        <form action="#" method="post"> <!-- Added action and method for a real form -->
 
-<label for="First name">First name:</label>
-<input type="text" name="First name" id="First name" placeholder="Enter your First name" required>
+            <p>This form demonstrates various input types and styling techniques.</p>
 
-<br><label for="Last name">Last name:</label>
-<input type="text" name="Last name" id="Last name" placeholder="Enter your Last name" required>
-<br>
-<label for="email">Email</label>
-<input type="email" id="email" name="Email" placeholder="Put your email here!" required>
+            <input type="text" name="firstName" placeholder="Enter your First Name" required>
+            <input type="number" name="age" placeholder="Enter your Age" min="1" max="120"> <!-- Added min/max -->
+            <br> <!-- Remove this <br> and let CSS handle spacing -->
 
-<br><br><br>
-<input type="button" value="next">
-<input type="button" value="previous">
-<input type="submit" value="submit"><br><br>
-<a href="photos.html">NEXT</a>
+            <div class="radio-group">
+                <h5>Choose your favorite fruit</h5>
+                <label><input type="radio" name="fruit" value="Mangoes"/>Mangoes</label>
+                <label><input type="radio" name="fruit" value="Banana"/>Banana</label>
+                <label><input type="radio" name="fruit" value="pineapple"/>Pineapple</label>
+            </div>
 
+            <div class="radio-group">
+                <h5>Choose your favorite Speaking language</h5>
+                <label><input type="radio" name="language" value="Amharic"/>Amharic</label>
+                <label><input type="radio" name="language" value="English"/>English</label>
+                <label><input type="radio" name="language" value="French"/>French</label>
+            </div>
 
+            <div class="checkbox-group">
+                <h3>How many of the following hobbies/interests do you share?</h3>
+                <label><input type="checkbox" name="hobbies" value="Sports"/>Sports</label>
+                <label><input type="checkbox" name="hobbies" value="Music"/>Music</label>
+                <label><input type="checkbox" name="hobbies" value="Reading"/>Reading</label>
+                <label><input type="checkbox" name="hobbies" value="Gaming"/>Gaming</label>
+            </div>
 
-  </form>
-  
+            <label for="firstNameAlt">First Name:</label> <!-- Changed id to avoid conflict -->
+            <input type="text" name="firstNameAlt" id="firstNameAlt" placeholder="Enter your First Name" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Put your email here!" required>
+
+            <div class="form-buttons">
+                <input type="button" value="Previous"> <!-- Changed to "Previous" for clarity -->
+                <input type="button" value="Next">
+                <input type="submit" value="Submit">
+            </div>
+
+        </form>
+
+        <div class="page-navigation-links">
+            <a href="photos.html" class="button-link">NEXT PAGE (Photos)</a>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Consistent footer content for your portfolio -->
+        <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+        <address>Location: Addis Ababa, Ethiopia</address>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

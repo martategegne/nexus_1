@@ -1,44 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Marta Tegegne Mamo</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Marta Tegegne Mamo - My Professional Portfolio</title>
+
+    <!-- external css link goes here  -->
+    <link rel="stylesheet" href="./styles/about.css">
+
+
 </head>
 <body>
-    <a href="./index.html">home</a>
-  <a href="./about.html">about</a>
-  <a href="./contact.html">contacts</a>
-  <a href="./form.html">form</a>
-    <a href="./photos.html">photos</a>
-  <h2>this is my about page.</h2>
-  <h1>a photo of me when I was in DSBS</h1>
-  
-  <img src="C:\NEXES_2025\portifolio-project\images\martina8.jpg " alt="DSBS photo" >
-  <br>
-  <br>
-  <img src="C:\NEXES_2025\portifolio-project\images\martina9.jpg " alt=" dsbs photo" >
+    <header>
+<!-- links to other related pages go here. -->
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html" class="nav-link">Home</a></li>
+                <li><a href="./about.html" class="nav-link active">About</a></li> <li><a href="./contact.html" class="nav-link">Contact</a></li>
+                <li><a href="./form.html" class="nav-link">Form Example</a></li>
+                <li><a href="./photos.html" class="nav-link">Gallery</a></li>
+                <li><a href="./Martina's_work_philosophy.html" class="nav-link">Work Philosophy</a></li>
+                <li><a href="./Martina's_work_journey.html" class="nav-link">Work Journey</a></li>
+                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">Academic Plan</a></li>
+                <li><a href="./Martina's_Resume.html" class="nav-link">Resume</a></li>
+                <li><a href="./Martina's_References.html" class="nav-link">References</a></li>
+                <li><a href="./Random_informations.html" class="nav-link">Random Info</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <br>
-  <br>
-  <img src="C:\NEXES_2025\portifolio-project\images\martina3.jpg" alt="passport size photo of me">
-<br><br>
-  <p>Lorem ipsum,<ins> dolor</ins> <sub>sit</sub><sup> amet</sup> <i><b>consectetur adipisicing</b> </i> elit.<br> Velit <em>accusamus corporis </em>quas, <br> &copy; ex <small> quo officiis</small> <mark> atque</mark> <del> veniam!</del>
- <br>
- <br>
- H <sub>2</sub>O <sub>2</sub>
- <br>
- <br>
- C <SUb>2</SUb>O <SUb>2</SUb>
- <br><br>
- x <sup>2</sup>+y <sup>2</sup>= z <sup>2</sup>
- <br>
- <br>
- <a href="index.html">PREVIOUS PAGE</a> 
- <br>
- <br>
- <a href="contact.html">NEXT PAGE</a>
-  </p>
+    <main class="container">
+        <h1>About Marta Tegegne Mamo</h1>
+
+        <section class="about-intro">
+            <img src="./images/professional-headshot.jpg" alt="Professional headshot of Marta Tegegne Mamo" class="profile-photo">
+            <p>Hello! I'm Marta Tegegne Mamo, a passionate [Your Profession/Interest, e.g., Web Developer, UI/UX Designer] with expertise in [mention 1-2 key skills, e.g., HTML, CSS, JavaScript, responsive design]. I thrive on [mention what you enjoy about your work, e.g., solving complex problems, creating intuitive user experiences].</p>
+            <p>This section provides a brief overview of my journey and what drives my work. For more details, explore my work philosophy, academic plan, and full resume through the navigation above.</p>
+        </section>
+
+        <section class="education-experience">
+            <h2>My Journey So Far</h2>
+            <div class="image-gallery">
+                <img src="./images/martina8.jpg" alt="Marta at DSBS during her studies" class="about-image">
+                <img src="./images/martina9.jpg" alt="Another photo of Marta at DSBS" class="about-image">
+                <img src="./images/martina3.jpg" alt="A professional photo of Marta" class="about-image">
+            </div>
+            <p>My foundational studies at DSBS [expand on what DSBS is, what you learned, and how it shaped you]. This period was crucial in developing my skills in [specific skills learned].</p>
+
+            <h3>Learning and Exploration</h3>
+            <p>During my learning process, I actively explore various HTML elements and their semantic uses. For instance, I've practiced using <strong class="highlight">superscripts</strong> ($x^2 + y^2 = z^2$) and <strong class="highlight">subscripts</strong> ($H_2O_2$) correctly for mathematical and chemical notations.</p>
+            <p>I also focus on structuring content clearly, highlighting key information using appropriate semantic tags like `<strong>` for importance and `<em>` for emphasis, rather than relying solely on visual tags. </p>
+        </section>
+
+        <section class="page-navigation-links">
+            <a href="index.html" class="button-link">PREVIOUS PAGE (Home)</a>
+            <a href="contact.html" class="button-link">NEXT PAGE (Contact)</a>
+        </section>
+    </main>
+  <!-- the footer goeshere -->
+
+    <footer>
+        <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+        <address>Location: Addis Ababa, Ethiopia</address>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
 </html>

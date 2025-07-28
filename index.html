@@ -1,65 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Marta Tegegne Mamo's portfolio</title>
-  <style>
-
-    h2{
-color: blue;
-background-color: peru;
-
-    }
-  </style>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marta Tegegne Mamo's Portfolio - Home</title>
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-    <a href="./index.html">home</a>
-  <a href="./about.html">about</a>
-  <a href="./contact.html">contacts</a>
-  <a href="./form.html">form</a>
-    <a href="./photos.html">photos</a>
-  <h1 style="background-color: blue ;color:red ; font-weight: bold;">MARTINA'S PORTFOLIO </h1>
+    <header>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="./index.html" class="nav-link active">Home</a></li> <li><a href="./about.html" class="nav-link">About</a></li>
+                <li><a href="./contact.html" class="nav-link">Contacts</a></li>
+                <li><a href="./form.html" class="nav-link">Form</a></li>
+                <li><a href="./photos.html" class="nav-link">Photos</a></li>
+                <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
+                <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
+                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
+                <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
+                <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
+                <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <h2>hello! this is my home page.</h2>
-  <h3>Welcome to my home </h3>
-  <h4>this page contains some informations about me.</h4>
-  <h5>I am called Marta Tegegne a software engineer.</h5>
-  <h6>at AUU Ethiopia.</h6>
-  <img src="C:\NEXES_2025\portifolio-project\images\martina5.jpg" alt="a photo of me in Ethiopian traditional cloth.">
-<br>
-<br>
-Marta: <blockquote>
-focus on who you are than  what others are saying about you. if you are curel, but you are humble in the eye of others, does it really has any meaning to your life ? working alot on yourself and focusing  who you really are outweighs working  hard to please others. So be yourself! 
+    <main class="container">
+        <h1 class="portfolio-title">MARTINA'S PORTFOLIO</h1> <h2>Hello! This is my home page.</h2>
+        <h3>Welcome to my home</h3>
+        <h4>This page contains some information about me.</h4>
+        <h5>I am called Marta Tegegne, a software engineer.</h5>
+        <h6>at AUU Ethiopia.</h6>
 
-<br>
-<br>
-Laurence: <q>If you say it takes me a ... much time  to finsh this, for sure you will not get that thing done before the time approaches! i.e if you say this thing takes a month to get done, it takes a month ; a year, it takes a year! </q>
-</blockquote>
-<br><br>
-I have graduated at Dessie Special Boarding School <abbr title="DSBS">DSBS</abbr> in 2023. <br>
-Throughout my educational journey, from the early days of elementary school to the momentous occasion of my grade 12 graduation, I have experienced a triumphant path marked by growth and accomplishment. <br>
-Each year brought new challenges and opportunities, shaping not only my knowledge but also my character. The support of teachers, friends, and family played a crucial role in this transformative <br>
-experience, allowing me to overcome obstacles and celebrate milestones along the way. <br>
- As I reflect on these years, I am filled with gratitude for the remarkable experiences 
- that have prepared me for the future.
-<br>
-<br>
-<h3>Things that I love to do the most!</h3>
-<ul>=-[;'/;']
-  <li>Reading a book</li>
-  <li>AS a student, attending class sessions</li>
-  <li>playing a football</li>
-  <li>Having a lunch with my friends</li>
-  <li>Attending a relgious celebrations and commemoration</li>
-</ul>
-<h3>Thank you for visting my page!</h3>
-<br><br>
-<a href="about.html">NEXT</a>
+        <img src="./images/martina5.jpg" alt="A photo of me in Ethiopian traditional cloth." class="home-profile-photo">
+        <section class="quotes-citations">
+            <h2>My Thoughts & Inspirations</h2>
+            <blockquote>
+                <p>Focus on who you are rather than what others are saying about you. If you are cruel, but you are humble in the eyes of others, does it really have any meaning to your life? Working a lot on yourself and focusing on who you really are outweighs working hard to please others. So be yourself!</p>
+                <cite>— Marta</cite>
+            </blockquote>
 
+            <blockquote>
+                <p><q>If you say it takes me a... much time to finish this, for sure you will not get that thing done before the time approaches! i.e., if you say this thing takes a month to get done, it takes a month; a year, it takes a year!</q></p>
+                <cite>— Laurence</cite>
+            </blockquote>
+        </section>
 
+        <section class="about-education">
+            <h2>My Educational Journey</h2>
+            <p class="abbreviation-text">I have graduated at Dessie Special Boarding School <abbr title="Dessie Special Boarding School">DSBS</abbr> in 2023.</p>
+            <p class="abbreviation-text">Throughout my educational journey, from the early days of elementary school to the momentous occasion of my Grade 12 graduation, I have experienced a triumphant path marked by growth and accomplishment. Each year brought new challenges and opportunities, shaping not only my knowledge but also my character. The support of teachers, friends, and family played a crucial role in this transformative experience, allowing me to overcome obstacles and celebrate milestones along the way. As I reflect on these years, I am filled with gratitude for the remarkable experiences that have prepared me for the future.</p>
+        </section>
+
+        <section class="things-i-love">
+            <h3>Things that I love to do the most!</h3>
+            <ul>
+                <li>Reading a book</li>
+                <li>Attending class sessions (as a student)</li>
+                <li>Playing football</li>
+                <li>Having lunch with my friends</li>
+                <li>Attending religious celebrations and commemoration</li>
+            </ul>
+        </section>
+
+        <h3>Thank you for visiting my page!</h3>
+
+        <div class="page-navigation-links">
+            <a href="about.html" class="button-link">NEXT PAGE (About)</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+        <address>Location: Addis Ababa, Ethiopia</address>
+        <nav class="footer-nav">
+            <ul>
+                <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
+                <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
+        </nav>
+    </footer>
 </body>
-
-
 </html>
