@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Marta Tegegne Mamo | Form Example</title>
+    <title>Marta Tegegne Mamo | Form Demonstration</title>
 
     <!-- SEO -->
-    <meta name="description" content="Form example page from the portfolio of Marta Tegegne Mamo, demonstrating HTML form elements and accessibility best practices.">
+    <meta name="description" content="An accessible HTML form example from the portfolio of Marta Tegegne Mamo, showcasing best practices in form structure, usability, and responsive design.">
     <meta name="author" content="Marta Tegegne Mamo">
 
     <!-- External CSS -->
@@ -16,145 +16,197 @@
 
 <body>
 
-    <!-- ================= HEADER ================= -->
-    <header>
-        <nav class="main-nav" aria-label="Main navigation">
-            <ul>
-                <li><a href="./index.html" class="nav-link">Home</a></li>
-                <li><a href="./about.html" class="nav-link">About</a></li>
-                <li><a href="./contact.html" class="nav-link">Contacts</a></li>
-                <li><a href="./form.html" class="nav-link active">Form</a></li>
-                <li><a href="./photos.html" class="nav-link">Photos</a></li>
-                <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
-                <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
-                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
-                <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
-                <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
-                <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
-            </ul>
-        </nav>
+<!-- ================= HEADER ================= -->
+<header>
+    <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="./contact.html" class="nav-link">Contacts</a></li>
+            <li><a href="./form.html" class="nav-link active" aria-current="page">Form</a></li>
+            <li><a href="./photos.html" class="nav-link">Photos</a></li>
+            <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
+            <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
+            <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
+            <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
+            <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
+            <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main class="container" id="main-content">
+
+    <header class="page-header">
+        <h1>Form Demonstration</h1>
+        <p class="page-description">
+            This page demonstrates a well-structured, accessible, and responsive HTML form,
+            following modern web development best practices.
+        </p>
     </header>
 
-    <!-- ================= MAIN ================= -->
-    <main class="container" role="main">
-        <h1>Form Example</h1>
+    <!-- ================= FORM ================= -->
+    <form action="#" method="post" class="portfolio-form" aria-describedby="form-description">
 
-        <form action="#" method="post" class="portfolio-form">
+        <p id="form-description" class="form-intro">
+            All fields marked as required must be completed before submission.
+        </p>
 
-            <p class="form-intro">
-                This form demonstrates different HTML input types, grouping techniques,
-                and accessible form design.
-            </p>
+        <!-- ===== BASIC INFORMATION ===== -->
+        <fieldset>
+            <legend>Basic Information</legend>
 
-            <!-- ===== BASIC INFO ===== -->
-            <fieldset>
-                <legend>Basic Information</legend>
+            <label for="firstName">
+                First Name <span aria-hidden="true">*</span>
+            </label>
+            <input
+                type="text"
+                id="firstName"
+                name="firstName"
+                placeholder="Enter your first name"
+                required
+                autocomplete="given-name"
+            >
 
-                <label for="firstName">First Name</label>
-                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
+            <label for="age">Age</label>
+            <input
+                type="number"
+                id="age"
+                name="age"
+                min="1"
+                max="120"
+                placeholder="Enter your age"
+            >
+        </fieldset>
 
-                <label for="age">Age</label>
-                <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age">
-            </fieldset>
+        <!-- ===== PREFERENCES ===== -->
+        <fieldset>
+            <legend>Preferences</legend>
 
-            <!-- ===== PREFERENCES ===== -->
-            <fieldset>
-                <legend>Preferences</legend>
+            <div class="radio-group">
+                <p class="group-title">Favorite Fruit</p>
 
-                <div class="radio-group">
-                    <p class="group-title">Favorite Fruit</p>
-                    <label>
-                        <input type="radio" name="fruit" value="Mangoes">
-                        Mangoes
-                    </label>
-                    <label>
-                        <input type="radio" name="fruit" value="Banana">
-                        Banana
-                    </label>
-                    <label>
-                        <input type="radio" name="fruit" value="Pineapple">
-                        Pineapple
-                    </label>
-                </div>
+                <label>
+                    <input type="radio" name="fruit" value="Mangoes">
+                    Mangoes
+                </label>
 
-                <div class="radio-group">
-                    <p class="group-title">Preferred Speaking Language</p>
-                    <label>
-                        <input type="radio" name="language" value="Amharic">
-                        Amharic
-                    </label>
-                    <label>
-                        <input type="radio" name="language" value="English">
-                        English
-                    </label>
-                    <label>
-                        <input type="radio" name="language" value="French">
-                        French
-                    </label>
-                </div>
-            </fieldset>
+                <label>
+                    <input type="radio" name="fruit" value="Banana">
+                    Banana
+                </label>
 
-            <!-- ===== INTERESTS ===== -->
-            <fieldset>
-                <legend>Hobbies & Interests</legend>
-
-                <div class="checkbox-group">
-                    <label>
-                        <input type="checkbox" name="hobbies" value="Sports">
-                        Sports
-                    </label>
-                    <label>
-                        <input type="checkbox" name="hobbies" value="Music">
-                        Music
-                    </label>
-                    <label>
-                        <input type="checkbox" name="hobbies" value="Reading">
-                        Reading
-                    </label>
-                    <label>
-                        <input type="checkbox" name="hobbies" value="Gaming">
-                        Gaming
-                    </label>
-                </div>
-            </fieldset>
-
-            <!-- ===== CONTACT DETAILS ===== -->
-            <fieldset>
-                <legend>Contact Details</legend>
-
-                <label for="lastName">Last Name</label>
-                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
-
-                <label for="email">Email Address</label>
-                <input type="email" id="email" name="email" placeholder="example@email.com" required>
-            </fieldset>
-
-            <!-- ===== BUTTONS ===== -->
-            <div class="form-buttons">
-                <button type="reset">Clear</button>
-                <button type="submit">Submit</button>
+                <label>
+                    <input type="radio" name="fruit" value="Pineapple">
+                    Pineapple
+                </label>
             </div>
 
-        </form>
+            <div class="radio-group">
+                <p class="group-title">Preferred Speaking Language</p>
 
-        <!-- ===== PAGE NAVIGATION ===== -->
-        <div class="page-navigation-links">
-            <a href="photos.html" class="button-link">NEXT PAGE (Photos)</a>
+                <label>
+                    <input type="radio" name="language" value="Amharic">
+                    Amharic
+                </label>
+
+                <label>
+                    <input type="radio" name="language" value="English">
+                    English
+                </label>
+
+                <label>
+                    <input type="radio" name="language" value="French">
+                    French
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- ===== INTERESTS ===== -->
+        <fieldset>
+            <legend>Hobbies & Interests</legend>
+
+            <div class="checkbox-group">
+                <label>
+                    <input type="checkbox" name="hobbies" value="Sports">
+                    Sports
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies" value="Music">
+                    Music
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies" value="Reading">
+                    Reading
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobbies" value="Gaming">
+                    Gaming
+                </label>
+            </div>
+        </fieldset>
+
+        <!-- ===== CONTACT DETAILS ===== -->
+        <fieldset>
+            <legend>Contact Details</legend>
+
+            <label for="lastName">
+                Last Name <span aria-hidden="true">*</span>
+            </label>
+            <input
+                type="text"
+                id="lastName"
+                name="lastName"
+                placeholder="Enter your last name"
+                required
+                autocomplete="family-name"
+            >
+
+            <label for="email">
+                Email Address <span aria-hidden="true">*</span>
+            </label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="example@email.com"
+                required
+                autocomplete="email"
+            >
+        </fieldset>
+
+        <!-- ===== FORM ACTIONS ===== -->
+        <div class="form-buttons">
+            <button type="reset">Clear Form</button>
+            <button type="submit">Submit Form</button>
         </div>
-    </main>
 
-    <!-- ================= FOOTER ================= -->
-    <footer>
-        <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
-        <address>Addis Ababa, Ethiopia</address>
+    </form>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-            <ul>
-             
-                <li><a href="#">Privacy Policy</a></li>
-            </ul>
-        </nav>
-    </footer>
+    <!-- ===== PAGE NAVIGATION ===== -->
+    <div class="page-navigation-links">
+        <a href="photos.html" class="button-link">Next Page: Photos</a>
+    </div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+
+    <address>Addis Ababa, Ethiopia</address>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</footer>
 
 </body>
 </html>
