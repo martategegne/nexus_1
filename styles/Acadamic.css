@@ -1,0 +1,257 @@
+/* =====================
+   ROOT VARIABLES
+===================== */
+:root {
+  --primary-color: #2b2e4a;
+  --secondary-color: #e84545;
+  --accent-color: #903749;
+  --background-color: #f9f9f9;
+  --text-color: #333;
+  --light-text: #666;
+  --white: #ffffff;
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+}
+
+/* =====================
+   GLOBAL RESET
+===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+/* =====================
+   GLOBAL NAVIGATION
+===================== */
+header {
+  background-color: var(--primary-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.main-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  transition: var(--transition);
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+  background-color: var(--secondary-color);
+}
+
+/* =====================
+   MAIN CONTAINER
+===================== */
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 3rem 1.5rem;
+}
+
+/* =====================
+   PAGE HEADER
+===================== */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+}
+
+.tagline {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: var(--light-text);
+  font-style: italic;
+}
+
+/* =====================
+   CONTENT SECTIONS
+===================== */
+.content-section {
+  background-color: var(--white);
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.content-section h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.content-section p {
+  margin-bottom: 1rem;
+}
+
+/* =====================
+   LIST STYLES
+===================== */
+.styled-list,
+.goal-list,
+.impact-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.styled-list li,
+.goal-list li,
+.impact-list li {
+  padding-left: 1.5rem;
+  margin-bottom: 0.8rem;
+  position: relative;
+}
+
+.styled-list li::before,
+.goal-list li::before,
+.impact-list li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+  font-weight: bold;
+}
+
+/* =====================
+   HIGHLIGHT SECTION
+===================== */
+.highlight {
+  border-left: 5px solid var(--secondary-color);
+  background: linear-gradient(
+    135deg,
+    #ffffff,
+    #fceaea
+  );
+}
+
+/* =====================
+   QUOTE SECTION
+===================== */
+.quote-section {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+.quote-section blockquote {
+  font-size: 1.4rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.quote-section cite {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* =====================
+   PAGE NAVIGATION
+===================== */
+.page-navigation-links {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.button-link {
+  text-decoration: none;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 0.8rem 1.4rem;
+  border-radius: 30px;
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.button-link:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+  background-color: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+}
+
+footer address {
+  font-style: normal;
+  margin-top: 0.5rem;
+}
+
+.footer-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+  padding: 0;
+}
+
+.footer-nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE DESIGN
+===================== */
+@media (max-width: 768px) {
+  .page-header h1 {
+    font-size: 2rem;
+  }
+
+  .content-section {
+    padding: 1.5rem;
+  }
+
+  .page-navigation-links {
+    flex-direction: column;
+    align-items: center;
+  }
+}
