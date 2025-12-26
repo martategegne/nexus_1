@@ -3,64 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marta's Contacts</title> <!-- Corrected title for consistency -->
 
-  <!-- exetrnal css link goes here -->
+    <title>Marta Tegegne Mamo | Contact</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Contact page of Marta Tegegne Mamo. Find my email, phone number, and social media profiles.">
+    <meta name="author" content="Marta Tegegne Mamo">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="./styles/contact.css">
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li><a href="./about.html" class="nav-link">About</a></li>
-                <li><a href="./contact.html" class="nav-link active">Contacts</a></li> <!-- Added .active class -->
+                <li><a href="./contact.html" class="nav-link active">Contact</a></li>
                 <li><a href="./form.html" class="nav-link">Form</a></li>
                 <li><a href="./photos.html" class="nav-link">Photos</a></li>
-                <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
-                <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
-                <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
-                <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
-                <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
-                <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+                <li><a href="./Martina's_Resume.html" class="nav-link">Resume</a></li>
             </ul>
         </nav>
     </header>
 
-    <main class="container">
-        <h2>This is my contacts page.</h2>
-        <h1>HERE YOU GO MY CONTACT DETAILS!</h1>
+    <!-- ================= MAIN ================= -->
+    <main class="container" role="main">
 
-        <div class="contact-details">
-            <img src="./images/martina1.jpg" alt="A photo of Marta Tegegne Mamo" class="contact-photo">
-            <!-- IMPORTANT: Change the image path from C:\... to a relative path like ./images/martina1.jpg -->
+        <!-- ===== PAGE INTRO ===== -->
+        <section class="contact-intro">
+            <h1>Get in Touch</h1>
+            <p>
+                Feel free to contact me using the details below or connect with me
+                through my social media platforms.
+            </p>
+        </section>
+
+        <!-- ===== CONTACT CARD ===== -->
+        <section class="contact-card">
+
+            <img src="./images/martina1.jpg"
+                 alt="Portrait of Marta Tegegne Mamo"
+                 class="contact-photo">
 
             <div class="contact-info">
-                <p><b>My Email:</b> <address>martategegne2015@gmail.com</address></p>
-                <p><b>My Phone Number:</b> <address>0980217490</address></p>
+                <p>
+                    <strong>Email:</strong>
+                    <a href="mailto:martategegne2015@gmail.com">
+                        martategegne2015@gmail.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Alternative Email:</strong>
+                    <a href="mailto:martategegnemamo@outlook.com">
+                        martategegnemamo@outlook.com
+                    </a>
+                </p>
+
+                <p>
+                    <strong>Phone:</strong>
+                    <a href="tel:+251980217490">+251 980 217 490</a>
+                </p>
+
+                <address>
+                    <strong>Location:</strong> Addis Ababa, Ethiopia
+                </address>
             </div>
-        </div>
 
-        <h3>Thank you for visiting my page!</h3>
+        </section>
 
-        <!-- The empty form tag is still here, if you plan to add a form later, it should be structured properly -->
-        <form action=""></form>
+        <!-- ===== SOCIAL MEDIA LINKS ===== -->
+        <section class="social-links">
+            <h2>Connect With Me</h2>
 
+            <ul>
+                <li>
+                    <a href="https://www.linkedin.com/in/marta-tegegne-mamo-5b801233b"
+                       target="_blank" rel="noopener noreferrer">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://github.com/martategegne"
+                       target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/marta_6887/?hl=en"
+                       target="_blank" rel="noopener noreferrer">
+                        Instagram
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://web.facebook.com/profile.php?id=61579757606240"
+                       target="_blank" rel="noopener noreferrer">
+                        Facebook
+                    </a>
+                </li>
+            </ul>
+        </section>
+
+        <!-- ===== PAGE NAVIGATION ===== -->
         <div class="page-navigation-links">
-            <a href="about.html" class="button-link">PREVIOUS PAGE (About)</a>
+            <a href="./about.html" class="button-link">← Back to About</a>
         </div>
+
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <!-- Consistent footer content for your portfolio -->
         <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
-        <address>Location: Addis Ababa, Ethiopia</address>
-        <nav class="footer-nav">
+        <address>Addis Ababa, Ethiopia</address>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
             <ul>
                 <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
+                <li><a href="#">Privacy Policy</a></li>
             </ul>
         </nav>
     </footer>
+
 </body>
 </html>
