@@ -1,315 +1,258 @@
-/* --- Global Styling / Reset --- */
-/* Universal Box-Sizing for easier layout */
-html {
-    box-sizing: border-box;
+/* ========================
+   ROOT VARIABLES (GLOBAL)
+======================== */
+:root {
+    --primary-color: #1f3c88;
+    --secondary-color: #f5f7fa;
+    --accent-color: #ffb703;
+    --text-color: #1a1a1a;
+    --muted-text: #555;
+    --border-radius: 12px;
+    --max-width: 1100px;
 }
-*, *::before, *::after {
-    box-sizing: inherit;
+
+/* ========================
+   RESET & BASE
+======================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
-    font-family: 'Arial', sans-serif; /* Consistent font for readability */
-    color: #333;
-    background-color: #f8f8f8; /* Light background for the page */
+    font-family: "Segoe UI", Roboto, Arial, sans-serif;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.7;
 }
 
-/* Remove default margins/paddings from elements often used for layout */
-h1, h2, h3, p, ul, ol, figure, address {
-    margin-top: 0;
-    margin-bottom: 0; /* Reset margins to control them explicitly with CSS */
+img {
+    max-width: 100%;
+    display: block;
 }
 
 a {
-    text-decoration: none; /* Remove default underline from links */
-    color: inherit; /* Links inherit color by default, styled explicitly later */
+    text-decoration: none;
+    color: inherit;
 }
 
-/* Responsive media */
-img {
-    max-width: 100%; /* Ensures images don't overflow their containers */
-    height: auto; /* Maintains aspect ratio */
-    display: block; /* Treats images as block elements for better layout control */
+ul {
+    list-style: none;
 }
 
-/* --- Container for Main Content --- */
-/* Centralizes the primary content for better readability on larger screens */
-.container {
-    max-width: 800px; /* Slightly narrower for contact details */
-    margin: 30px auto; /* Centers the main content area with vertical spacing */
-    padding: 0 15px; /* Adds horizontal padding for smaller screens */
-}
-
-/* --- Header and Navigation Styling --- */
+/* ========================
+   HEADER & NAVIGATION
+======================== */
 header {
-    background-color: #2c3e50; /* Darker header background */
-    padding: 15px 0;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.15); /* Subtle shadow for depth */
+    background: #ffffff;
+    border-bottom: 1px solid #e6e6e6;
 }
 
 .main-nav ul {
-    list-style: none; /* Remove bullet points from navigation list */
-    padding: 0;
-    margin: 0;
-    display: flex; /* Use flexbox for horizontal navigation */
-    justify-content: center; /* Center the navigation links */
-    flex-wrap: wrap; /* Allow links to wrap to the next line on smaller screens */
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 1rem;
 }
 
-.main-nav ul li {
-    margin: 0 10px; /* Space between navigation items */
+.main-nav a {
+    font-weight: 600;
+    color: var(--primary-color);
 }
 
-.nav-link { /* Class for individual navigation links */
-    color: white;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions for hover effects */
-    border-radius: 5px;
-    font-weight: bold;
-    text-transform: uppercase; /* Uppercase text for navigation */
-    letter-spacing: 0.5px; /* Slightly increased letter spacing */
-    display: block; /* Make the entire padding area clickable */
+.main-nav a:hover,
+.main-nav a:focus {
+    color: var(--accent-color);
 }
 
-.nav-link:hover {
-    background-color: #34495e; /* Darker background on hover */
-    color: #a2e8e8; /* Lighter text color on hover */
+.main-nav .active {
+    border-bottom: 3px solid var(--accent-color);
 }
 
-/* Highlight the active (current) page */
-.nav-link.active { /* Apply this class to the <a> tag of the current page */
-    background-color: #007bff; /* Primary blue to indicate active page */
-    color: white;
+/* ========================
+   MAIN CONTAINER
+======================== */
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 3.5rem 1.5rem;
 }
 
-/* --- Headings Styling --- */
-h1 {
-    color: #007bff; /* Primary blue for main page titles */
-    font-size: 2.8em;
+/* ========================
+   INTRO SECTION
+======================== */
+.contact-intro {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Subtle text shadow */
+    margin-bottom: 3rem;
 }
 
-h2 {
-    color: #34495e; /* Darker grey-blue for main sections */
-    font-size: 2em;
-    text-align: center;
-    margin-top: 50px; /* More space above new sections */
-    margin-bottom: 30px;
+.contact-intro h1 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
 }
 
-h3 { /* For sub-sections or specific points within sections */
-    color: #555;
-    font-size: 1.6em;
-    text-align: center;
-    margin-top: 40px;
-    margin-bottom: 20px;
+.contact-intro p {
+    max-width: 600px;
+    margin: auto;
+    color: var(--muted-text);
 }
 
-/* --- Contact Details Section --- */
-.contact-details {
-    text-align: center; /* Center the content within this section */
-    margin-top: 30px;
-    margin-bottom: 50px;
+/* ========================
+   CONTACT CARD
+======================== */
+.contact-card {
+    background: #ffffff;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 2.5rem;
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
+    margin-bottom: 4rem;
+    align-items: center;
 }
 
-.contact-photo { /* Styling for your main photo on the contacts page */
-    width: 250px; /* Fixed width for the photo */
-    height: 250px; /* Fixed height for a square shape */
-    object-fit: cover; /* Ensures image covers the area without distortion */
-    border-radius: 10px; /* Slightly rounded corners */
-    border: 3px solid #007bff; /* Primary blue border */
-    display: block; /* Make it a block element to center */
-    margin: 20px auto 30px auto; /* Centered with vertical spacing */
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15); /* More pronounced shadow */
+.contact-photo {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    margin: auto;
 }
 
-.contact-info p {
-    font-size: 1.2em; /* Larger font size for contact info */
-    margin-bottom: 15px; /* Space between contact lines */
-    color: #444;
-}
-
-.contact-info p b {
-    color: #2c3e50; /* Darker color for the bold labels */
-    margin-right: 10px; /* Space between label and address */
-}
-
+/* ========================
+   CONTACT INFO
+======================== */
+.contact-info p,
 .contact-info address {
-    display: inline; /* Keep address on the same line as the label */
-    font-style: normal; /* Remove default italic style */
+    margin-bottom: 1rem;
+    font-style: normal;
 }
 
-/* --- Previous Page Link (Button Style) --- */
+.contact-info strong {
+    color: var(--primary-color);
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.contact-info a:hover,
+.contact-info a:focus {
+    color: var(--accent-color);
+}
+
+/* ========================
+   SOCIAL LINKS
+======================== */
+.social-links {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.social-links h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.social-links ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.2rem;
+}
+
+.social-links a {
+    background: #ffffff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 30px;
+    font-weight: 700;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.social-links a:hover,
+.social-links a:focus {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    color: var(--primary-color);
+}
+
+/* ========================
+   PAGE NAVIGATION
+======================== */
 .page-navigation-links {
     text-align: center;
-    margin-top: 40px;
-    margin-bottom: 40px;
 }
 
-.button-link { /* Styling for the previous/next page links as buttons */
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 12px 25px;
-    border-radius: 8px;
-    font-weight: bold;
-    margin: 0 10px; /* Space between buttons */
-    transition: background-color 0.3s ease, transform 0.2s ease;
+.button-link {
+    background: var(--primary-color);
+    color: #ffffff;
+    padding: 0.75rem 2rem;
+    border-radius: 30px;
+    font-weight: 700;
+    transition: background 0.2s ease, transform 0.2s ease;
 }
 
-.button-link:hover {
-    background-color: #0056b3;
+.button-link:hover,
+.button-link:focus {
+    background: #162447;
     transform: translateY(-2px);
 }
 
-/* --- Footer Styling --- */
+/* ========================
+   FOOTER
+======================== */
 footer {
-    background-color: #2c3e50; /* Dark background consistent with header */
-    color: #ecf0f1; /* Light text color */
-    padding: 40px 20px;
+    background: #0f172a;
+    color: #ffffff;
+    padding: 2.5rem 1.5rem;
+    margin-top: 4rem;
+}
+
+footer p,
+footer address {
     text-align: center;
-    margin-top: 60px; /* Space above the footer */
-    box-shadow: 0 -2px 5px rgba(0,0,0,0.15); /* Subtle shadow at the top */
-}
-
-footer p, footer address {
-    margin-bottom: 10px;
-    font-size: 0.95em;
-    line-height: 1.5;
-}
-
-footer a {
-    color: #a2e8e8; /* Lighter blue for footer links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #007bff; /* Primary blue on hover */
-    text-decoration: underline;
+    margin-bottom: 0.5rem;
 }
 
 .footer-nav ul {
-    list-style: none;
-    padding: 0;
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 25px;
+    gap: 1.5rem;
+    margin-top: 1rem;
 }
 
-.footer-nav ul li {
-    margin: 0 15px;
+.footer-nav a:hover,
+.footer-nav a:focus {
+    color: var(--accent-color);
 }
 
-.footer-nav ul li a {
-    padding: 5px 10px;
-    border-radius: 3px;
-    font-weight: bold;
+/* ========================
+   ACCESSIBILITY
+======================== */
+a:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
 }
 
-.footer-nav ul li a:hover {
-    background-color: rgba(255,255,255,0.1);
-}
-
-/* --- Responsiveness --- */
-
-@media (max-width: 768px) { /* Adjustments for tablets and smaller screens */
-    .container {
-        margin: 15px auto;
-        padding: 0 10px;
-    }
-
-    .main-nav ul {
-        flex-direction: column; /* Stack navigation links vertically */
-        align-items: center;
-        padding: 10px 0;
-    }
-
-    .main-nav ul li {
-        margin: 5px 0; /* Vertical spacing between stacked links */
-        width: 90%; /* Make links wider for easier tapping */
+/* ========================
+   RESPONSIVE
+======================== */
+@media (max-width: 768px) {
+    .contact-card {
+        grid-template-columns: 1fr;
         text-align: center;
-    }
-
-    .nav-link {
-        padding: 12px 0; /* Adjust padding for stacked links */
-    }
-
-    h1 {
-        font-size: 2.2em;
-        margin-top: 25px;
-    }
-
-    h2 {
-        font-size: 1.7em;
-        margin-top: 30px;
-        margin-bottom: 20px;
-    }
-
-    h3 {
-        font-size: 1.4em;
-        margin-top: 25px;
-        margin-bottom: 15px;
-    }
-
-    .contact-photo {
-        width: 200px;
-        height: 200px;
-    }
-
-    .contact-info p {
-        font-size: 1.1em;
-    }
-
-    .button-link {
-        padding: 10px 20px;
-        font-size: 0.9em;
-        margin: 0 5px;
-    }
-
-    footer {
-        padding: 30px 10px;
-    }
-}
-
-@media (max-width: 480px) { /* Adjustments for mobile phones */
-    h1 {
-        font-size: 1.8em;
-    }
-
-    h2 {
-        font-size: 1.4em;
-    }
-
-    h3 {
-        font-size: 1.2em;
-    }
-
-    .contact-photo {
-        width: 150px;
-        height: 150px;
-    }
-
-    .contact-info p {
-        font-size: 1em;
-    }
-
-    .button-link {
-        display: block; /* Stack buttons vertically on very small screens */
-        margin: 10px auto;
-        width: 80%;
-    }
-
-    .footer-nav ul li {
-        margin: 0 8px;
     }
 }
