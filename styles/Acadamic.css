@@ -1,20 +1,20 @@
 /* =====================
-   ROOT VARIABLES
+   GLOBAL COLOR SYSTEM
+   (MATCHES HOME PAGE)
 ===================== */
 :root {
-  --primary-color: #2b2e4a;
-  --secondary-color: #e84545;
-  --accent-color: #903749;
-  --background-color: #f9f9f9;
-  --text-color: #333;
-  --light-text: #666;
-  --white: #ffffff;
+  --primary-color: #1f2933;     /* Main dark (nav, footer) */
+  --secondary-color: #2563eb;   /* Accent / buttons */
+  --background-color: #f8fafc;  /* Page background */
+  --card-bg: #ffffff;           /* Sections */
+  --text-color: #111827;
+  --muted-text: #6b7280;
   --border-radius: 12px;
-  --transition: all 0.3s ease;
+  --transition: 0.3s ease;
 }
 
 /* =====================
-   GLOBAL RESET
+   RESET
 ===================== */
 * {
   margin: 0;
@@ -22,19 +22,15 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Inter", "Segoe UI", sans-serif;
   background-color: var(--background-color);
   color: var(--text-color);
   line-height: 1.7;
 }
 
 /* =====================
-   GLOBAL NAVIGATION
+   GLOBAL NAV (SAME AS HOME)
 ===================== */
 header {
   background-color: var(--primary-color);
@@ -47,13 +43,13 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  gap: 1rem;
   list-style: none;
   padding: 1rem;
-  gap: 1rem;
 }
 
 .main-nav a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: none;
   font-weight: 500;
   padding: 0.4rem 0.8rem;
@@ -90,8 +86,7 @@ header {
 
 .tagline {
   margin-top: 1rem;
-  font-size: 1.1rem;
-  color: var(--light-text);
+  color: var(--muted-text);
   font-style: italic;
 }
 
@@ -99,21 +94,22 @@ header {
    CONTENT SECTIONS
 ===================== */
 .content-section {
-  background-color: var(--white);
+  background-color: var(--card-bg);
   padding: 2rem;
   margin-bottom: 2rem;
   border-radius: var(--border-radius);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .content-section h2 {
-  color: var(--accent-color);
   margin-bottom: 1rem;
-  font-size: 1.5rem;
+  color: var(--secondary-color);
+  font-size: 1.4rem;
 }
 
 .content-section p {
   margin-bottom: 1rem;
+  color: var(--text-color);
 }
 
 /* =====================
@@ -123,15 +119,14 @@ header {
 .goal-list,
 .impact-list {
   list-style: none;
-  padding-left: 0;
 }
 
 .styled-list li,
 .goal-list li,
 .impact-list li {
-  padding-left: 1.5rem;
-  margin-bottom: 0.8rem;
   position: relative;
+  padding-left: 1.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .styled-list li::before,
@@ -141,7 +136,6 @@ header {
   position: absolute;
   left: 0;
   color: var(--secondary-color);
-  font-weight: bold;
 }
 
 /* =====================
@@ -149,24 +143,20 @@ header {
 ===================== */
 .highlight {
   border-left: 5px solid var(--secondary-color);
-  background: linear-gradient(
-    135deg,
-    #ffffff,
-    #fceaea
-  );
+  background-color: #f0f6ff;
 }
 
 /* =====================
-   QUOTE SECTION
+   QUOTE / VISION
 ===================== */
 .quote-section {
   text-align: center;
   background-color: var(--primary-color);
-  color: var(--white);
+  color: #ffffff;
 }
 
 .quote-section blockquote {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   font-style: italic;
   margin-bottom: 1rem;
 }
@@ -177,40 +167,38 @@ header {
 }
 
 /* =====================
-   PAGE NAVIGATION
+   PAGE NAV BUTTONS
 ===================== */
 .page-navigation-links {
   display: flex;
   justify-content: space-between;
   gap: 1rem;
-  margin-top: 2rem;
   flex-wrap: wrap;
 }
 
 .button-link {
-  text-decoration: none;
   background-color: var(--secondary-color);
-  color: var(--white);
-  padding: 0.8rem 1.4rem;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 1.4rem;
   border-radius: 30px;
   font-weight: 500;
   transition: var(--transition);
 }
 
 .button-link:hover {
-  background-color: var(--accent-color);
   transform: translateY(-2px);
+  opacity: 0.95;
 }
 
 /* =====================
-   FOOTER
+   FOOTER (SAME AS HOME)
 ===================== */
 footer {
   background-color: var(--primary-color);
-  color: var(--white);
+  color: #ffffff;
   text-align: center;
   padding: 2rem 1rem;
-  margin-top: 3rem;
 }
 
 footer address {
@@ -224,14 +212,12 @@ footer address {
   justify-content: center;
   gap: 1rem;
   margin-top: 1rem;
-  padding: 0;
 }
 
 .footer-nav a {
-  color: var(--white);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
-  transition: var(--transition);
 }
 
 .footer-nav a:hover {
@@ -239,15 +225,11 @@ footer address {
 }
 
 /* =====================
-   RESPONSIVE DESIGN
+   RESPONSIVE
 ===================== */
 @media (max-width: 768px) {
   .page-header h1 {
     font-size: 2rem;
-  }
-
-  .content-section {
-    padding: 1.5rem;
   }
 
   .page-navigation-links {
