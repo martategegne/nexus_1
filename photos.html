@@ -1,39 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Martina's photes in her village</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- external css link goes here. -->
+    <title>Marta Tegegne Mamo | Photo Gallery</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Photo gallery from the portfolio of Marta Tegegne Mamo, featuring moments from her village life, family, and personal journey.">
+    <meta name="author" content="Marta Tegegne Mamo">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./styles/photos.css">
 </head>
+
 <body>
-<!-- link to other related web pages goes here. -->
-   <a href="./index.html">home</a>
-  <a href="./about.html">about</a>
-  <a href="./contact.html">contacts</a>
-  <a href="./form.html">form</a>
-    <a href="./photos.html">photos</a>
-<a href="./Martina's_work_philosophy.html">Myworkphilosophy</a>
-<a href="./Martina's_work_journey.html">Myworkjourney</a>
-<a href="./Martina's_Acadamic_plan_of_Study.html">Myplaneofstudy</a>
-<a href="./Martina's_Resume.html">Myresume</a>
-<a href="./Martina's_References.html">Myreferencese</a>
-<a href="./Random_informations.html">Randominformation</a>
 
+<!-- ================= HEADER ================= -->
+<header>
+    <nav class="main-nav" aria-label="Main navigation">
+        <ul>
+            <li><a href="./index.html" class="nav-link">Home</a></li>
+            <li><a href="./about.html" class="nav-link">About</a></li>
+            <li><a href="./contact.html" class="nav-link">Contacts</a></li>
+            <li><a href="./form.html" class="nav-link">Form</a></li>
+            <li><a href="./photos.html" class="nav-link active" aria-current="page">Photos</a></li>
+            <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
+            <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
+            <li><a href="./Martina's_Acadamic_plan_of_Study.html" class="nav-link">My Plan of Study</a></li>
+            <li><a href="./Martina's_Resume.html" class="nav-link">My Resume</a></li>
+            <li><a href="./Martina's_References.html" class="nav-link">My References</a></li>
+            <li><a href="./Random_informations.html" class="nav-link">Random Information</a></li>
+        </ul>
+    </nav>
+</header>
 
-  <h3>A photo of me in my home village Gudguda</h3>
+<!-- ================= MAIN ================= -->
+<main class="container">
 
-  <!-- I am exercising here how to use div tag -->
-  <div>
-<p>In 2024, when I was visting my father's farm land the with my father</p>
-<img src="C:\NEXES_2025\portifolio-project\images\martina7.jpg"   alt="martina's photo">
-<img src="C:\NEXES_2025\portifolio-project\images\myDearFather.jpg" alt=" my dear father's photo">
+    <!-- ===== PAGE INTRO ===== -->
+    <header class="page-header">
+        <h1>Photo Gallery</h1>
+        <p class="page-description">
+            A collection of meaningful moments from my life — my village, family,
+            education, and personal journey.
+        </p>
+    </header>
 
-  </div>
-  <!-- links to other 2 related web pages. -->
-<!-- ?????? -->
-  <a href="">PREVIOUS</a>
-  <a href="">NEXT</a>
+    <!-- ================= CATEGORY 1 ================= -->
+    <section class="photo-category">
+        <h2>Village Life – Gudguda</h2>
+        <p class="category-description">
+            Photos taken in 2024 during my visit to my home village Gudguda,
+            while visiting my father’s farmland.
+        </p>
+
+        <div class="photo-grid">
+            <figure>
+                <img src="./images/martina7.jpg" alt="Marta Tegegne Mamo standing in her village Gudguda">
+                <figcaption>
+                    A moment from my visit to Gudguda village, 2024.
+                </figcaption>
+            </figure>
+
+            <figure>
+                <img src="./images/myDearFather.jpg" alt="Marta with her father at the family farmland">
+                <figcaption>
+                    With my dear father at our farmland.
+                </figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ================= CATEGORY 2 ================= -->
+    <section class="photo-category">
+        <h2>Family & Personal Moments</h2>
+        <p class="category-description">
+            Special memories with family members and close moments that shaped my values.
+        </p>
+
+        <div class="photo-grid">
+            <!-- Placeholder for future photos -->
+            <figure class="placeholder">
+                <img src="./images/placeholder.jpg" alt="Future family photo">
+                <figcaption>More family memories coming soon.</figcaption>
+            </figure>
+
+            <figure class="placeholder">
+                <img src="./images/placeholder.jpg" alt="Future personal photo">
+                <figcaption>Personal moments to be added.</figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!-- ================= CATEGORY 3 ================= -->
+    <section class="photo-category">
+        <h2>Education & Academic Life</h2>
+        <p class="category-description">
+            Photos related to my academic journey and learning experiences.
+        </p>
+
+        <div class="photo-grid">
+            <!-- Empty for now, ready for expansion -->
+            <p class="empty-note">
+                Academic photos will be added in the future.
+            </p>
+        </div>
+    </section>
+
+    <!-- ================= PAGE NAVIGATION ================= -->
+    <div class="page-navigation-links">
+        <a href="form.html" class="button-link">PREVIOUS PAGE (Form)</a>
+        <a href="Martina's_work_philosophy.html" class="button-link">NEXT PAGE (Work Philosophy)</a>
+    </div>
+
+</main>
+
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
+
+    <address>Addis Ababa, Ethiopia</address>
+
+    <nav class="footer-nav" aria-label="Footer navigation">
+        <ul>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+        </ul>
+    </nav>
+</footer>
+
 </body>
 </html>
