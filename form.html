@@ -3,18 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marta's Form Example</title> <!-- More descriptive title -->
-    <!-- the external css link goes here -->
-     <link rel="stylesheet" href="./styles/form.css">
+
+    <title>Marta Tegegne Mamo | Form Example</title>
+
+    <!-- SEO -->
+    <meta name="description" content="Form example page from the portfolio of Marta Tegegne Mamo, demonstrating HTML form elements and accessibility best practices.">
+    <meta name="author" content="Marta Tegegne Mamo">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="./styles/form.css">
 </head>
+
 <body>
+
+    <!-- ================= HEADER ================= -->
     <header>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Main navigation">
             <ul>
                 <li><a href="./index.html" class="nav-link">Home</a></li>
                 <li><a href="./about.html" class="nav-link">About</a></li>
                 <li><a href="./contact.html" class="nav-link">Contacts</a></li>
-                <li><a href="./form.html" class="nav-link active">Form</a></li> <!-- Added .active class -->
+                <li><a href="./form.html" class="nav-link active">Form</a></li>
                 <li><a href="./photos.html" class="nav-link">Photos</a></li>
                 <li><a href="./Martina's_work_philosophy.html" class="nav-link">My Work Philosophy</a></li>
                 <li><a href="./Martina's_work_journey.html" class="nav-link">My Work Journey</a></li>
@@ -26,71 +35,126 @@
         </nav>
     </header>
 
-    <main class="container">
-        <h1>My Form Example</h1>
+    <!-- ================= MAIN ================= -->
+    <main class="container" role="main">
+        <h1>Form Example</h1>
 
-        <form action="#" method="post"> <!-- Added action and method for a real form -->
+        <form action="#" method="post" class="portfolio-form">
 
-            <p>This form demonstrates various input types and styling techniques.</p>
+            <p class="form-intro">
+                This form demonstrates different HTML input types, grouping techniques,
+                and accessible form design.
+            </p>
 
-            <input type="text" name="firstName" placeholder="Enter your First Name" required>
-            <input type="number" name="age" placeholder="Enter your Age" min="1" max="120"> <!-- Added min/max -->
-            <br> <!-- Remove this <br> and let CSS handle spacing -->
+            <!-- ===== BASIC INFO ===== -->
+            <fieldset>
+                <legend>Basic Information</legend>
 
-            <div class="radio-group">
-                <h5>Choose your favorite fruit</h5>
-                <label><input type="radio" name="fruit" value="Mangoes"/>Mangoes</label>
-                <label><input type="radio" name="fruit" value="Banana"/>Banana</label>
-                <label><input type="radio" name="fruit" value="pineapple"/>Pineapple</label>
-            </div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="Enter your first name" required>
 
-            <div class="radio-group">
-                <h5>Choose your favorite Speaking language</h5>
-                <label><input type="radio" name="language" value="Amharic"/>Amharic</label>
-                <label><input type="radio" name="language" value="English"/>English</label>
-                <label><input type="radio" name="language" value="French"/>French</label>
-            </div>
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter your age">
+            </fieldset>
 
-            <div class="checkbox-group">
-                <h3>How many of the following hobbies/interests do you share?</h3>
-                <label><input type="checkbox" name="hobbies" value="Sports"/>Sports</label>
-                <label><input type="checkbox" name="hobbies" value="Music"/>Music</label>
-                <label><input type="checkbox" name="hobbies" value="Reading"/>Reading</label>
-                <label><input type="checkbox" name="hobbies" value="Gaming"/>Gaming</label>
-            </div>
+            <!-- ===== PREFERENCES ===== -->
+            <fieldset>
+                <legend>Preferences</legend>
 
-            <label for="firstNameAlt">First Name:</label> <!-- Changed id to avoid conflict -->
-            <input type="text" name="firstNameAlt" id="firstNameAlt" placeholder="Enter your First Name" required>
+                <div class="radio-group">
+                    <p class="group-title">Favorite Fruit</p>
+                    <label>
+                        <input type="radio" name="fruit" value="Mangoes">
+                        Mangoes
+                    </label>
+                    <label>
+                        <input type="radio" name="fruit" value="Banana">
+                        Banana
+                    </label>
+                    <label>
+                        <input type="radio" name="fruit" value="Pineapple">
+                        Pineapple
+                    </label>
+                </div>
 
-            <label for="lastName">Last Name:</label>
-            <input type="text" name="lastName" id="lastName" placeholder="Enter your Last Name" required>
+                <div class="radio-group">
+                    <p class="group-title">Preferred Speaking Language</p>
+                    <label>
+                        <input type="radio" name="language" value="Amharic">
+                        Amharic
+                    </label>
+                    <label>
+                        <input type="radio" name="language" value="English">
+                        English
+                    </label>
+                    <label>
+                        <input type="radio" name="language" value="French">
+                        French
+                    </label>
+                </div>
+            </fieldset>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" placeholder="Put your email here!" required>
+            <!-- ===== INTERESTS ===== -->
+            <fieldset>
+                <legend>Hobbies & Interests</legend>
 
+                <div class="checkbox-group">
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Sports">
+                        Sports
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Music">
+                        Music
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Reading">
+                        Reading
+                    </label>
+                    <label>
+                        <input type="checkbox" name="hobbies" value="Gaming">
+                        Gaming
+                    </label>
+                </div>
+            </fieldset>
+
+            <!-- ===== CONTACT DETAILS ===== -->
+            <fieldset>
+                <legend>Contact Details</legend>
+
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Enter your last name" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="example@email.com" required>
+            </fieldset>
+
+            <!-- ===== BUTTONS ===== -->
             <div class="form-buttons">
-                <input type="button" value="Previous"> <!-- Changed to "Previous" for clarity -->
-                <input type="button" value="Next">
-                <input type="submit" value="Submit">
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
             </div>
 
         </form>
 
+        <!-- ===== PAGE NAVIGATION ===== -->
         <div class="page-navigation-links">
             <a href="photos.html" class="button-link">NEXT PAGE (Photos)</a>
         </div>
     </main>
 
+    <!-- ================= FOOTER ================= -->
     <footer>
-        <!-- Consistent footer content for your portfolio -->
         <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
-        <address>Location: Addis Ababa, Ethiopia</address>
-        <nav class="footer-nav">
+        <address>Addis Ababa, Ethiopia</address>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
             <ul>
-                <li><a href="mailto:martategegne2015@gmail.com">Email Me</a></li>
-                <li><a href="/privacy">Privacy Policy</a></li>
+             
+                <li><a href="#">Privacy Policy</a></li>
             </ul>
         </nav>
     </footer>
+
 </body>
 </html>
