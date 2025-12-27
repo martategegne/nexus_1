@@ -1,0 +1,222 @@
+/* ================= ROOT VARIABLES ================= */
+:root {
+    --primary-color: #1e3a8a;      /* Deep blue */
+    --secondary-color: #2563eb;    /* Accent blue */
+    --light-bg: #f8fafc;
+    --card-bg: #ffffff;
+    --text-dark: #0f172a;
+    --text-muted: #475569;
+    --border-color: #e2e8f0;
+}
+
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+/* ================= GLOBAL ================= */
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ================= NAVIGATION ================= */
+header {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.nav-link {
+    padding: 0.45rem 0.9rem;
+    border-radius: 6px;
+    color: var(--text-muted);
+    font-weight: 500;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+}
+
+/* ================= HERO SECTION ================= */
+.hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: #ffffff;
+    border-radius: 14px;
+    margin-bottom: 3rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-description {
+    max-width: 700px;
+    margin: auto;
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.hero-stats div {
+    text-align: center;
+}
+
+.hero-stats strong {
+    display: block;
+    font-size: 1.6rem;
+}
+
+/* ================= CERTIFICATES ================= */
+.certificates-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* ================= CERTIFICATE CARD ================= */
+.certificate-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certificate-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* Image */
+.certificate-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    background-color: #eef2ff;
+}
+
+/* Content */
+.certificate-info {
+    padding: 1.5rem;
+}
+
+.certificate-info h2 {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.6rem;
+}
+
+.certificate-meta {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-bottom: 0.8rem;
+}
+
+.certificate-description {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+}
+
+/* ================= PAGE NAVIGATION ================= */
+.page-navigation-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.button-link {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    padding: 0.6rem 1.4rem;
+    border-radius: 999px;
+    font-weight: 500;
+    transition: background 0.3s ease;
+}
+
+.button-link:hover {
+    background-color: var(--secondary-color);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 4rem;
+}
+
+footer p {
+    margin-bottom: 0.4rem;
+}
+
+footer address {
+    font-style: normal;
+    color: var(--text-muted);
+}
+
+.footer-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (min-width: 768px) {
+    .certificate-card {
+        flex-direction: row;
+    }
+
+    .certificate-card img {
+        width: 45%;
+    }
+
+    .certificate-info {
+        width: 55%;
+    }
+}
