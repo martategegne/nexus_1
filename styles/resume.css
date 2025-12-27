@@ -76,10 +76,20 @@ header {
 }
 
 .professional-title {
-    margin-top: 0.5rem;
-    font-size: 1.1rem;
-    color: var(--muted-text);
+    margin-top: 0.6rem;
+    font-size: 1.15rem;
+    font-weight: 500;
+    color: #0f172a; /* Dark navy for strong contrast */
+    background-color: #e0e7ff; /* Soft blue background */
+    display: inline-block;
+    padding: 0.4rem 1rem;
+    border-radius: 999px; /* Pill shape */
 }
+.professional-title:hover {
+    background-color: #c7d2fe;
+    transition: background-color 0.3s ease;
+}
+
 
 /* ================= CONTENT SECTIONS ================= */
 .content-section {
@@ -222,3 +232,4 @@ footer address {
         text-align: center;
     }
 }
+
