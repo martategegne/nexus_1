@@ -21,10 +21,10 @@
         <ul>
             <li><a href="./index.html" class="nav-link">Home</a></li>
             <li><a href="./about.html" class="nav-link">About</a></li>
-            <li><a href="./photos.html" class="nav-link">Photos</a></li>
+            <li><a href="./contact.html" class="nav-link">Contact</a></li>
+            <li><a href="./photos.html" class="nav-link">Gallery</a></li>
             <li><a href="./Martina's_Resume.html" class="nav-link">Resume</a></li>
             <li><a href="./certificates.html" class="nav-link active" aria-current="page">Certificates</a></li>
-            <li><a href="./Random_informations.html" class="nav-link">More</a></li>
         </ul>
     </nav>
 </header>
@@ -321,7 +321,7 @@
                     <h2>Letter of Recommendation (High School Principal)</h2>
                     <p class="certificate-meta">
                         <span>Issued by: Dessie Special Boarding School</span>
-                        <span>Issued: August 2. 2025</span>
+                        <span>Issued: August 2, 2025</span>
                     </p>
                     <p class="certificate-description">Highlights high academic distinction, exemplary leadership, integrity, and proactive involvement in innovative school initiatives.</p>
                 </div>
