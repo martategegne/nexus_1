@@ -1,19 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Marta Tegegne Mamo | Certificates</title>
 
     <!-- SEO -->
-    <meta name="description" content="Professional certificates earned by Marta Tegegne Mamo in software engineering, AI, data analysis, leadership, and social impact.">
-    <meta name="author" content="Marta Tegegne Mamo">
+    <meta name="description" content="Professional certificates earned by Marta Tegegne Mamo in software engineering, AI, data analysis, leadership, and social impact." />
+    <meta name="author" content="Marta Tegegne Mamo" />
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="./styles/certificates.css">
-</head>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #fafafa;
+            color: #333;
+        }
+        header {
+            background-color: #004080;
+            padding: 1em 2em;
+        }
+        nav.main-nav ul {
+            list-style: none;
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            gap: 1em;
+        }
+        nav.main-nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 600;
+            padding: 0.4em 0.8em;
+        }
+        nav.main-nav a.active,
+        nav.main-nav a:hover {
+            background-color: #0066cc;
+            border-radius: 4px;
+        }
+        main.container {
+            max-width: 1200px;
+            margin: 2em auto;
+            padding: 0 1em;
+        }
+        h1, h2, h3 {
+            color: #004080;
+        }
+        section.organization {
+            margin-bottom: 3em;
+        }
+        .certificate-card {
+            display: flex;
+            gap: 1em;
+            background-color: #fff;
+            border-radius: 6px;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            padding: 1em;
+            margin-bottom: 1em;
+            align-items: flex-start;
+        }
+        .certificate-card img {
+            width: 150px;
+            height: auto;
+            cursor: pointer;
+            border-radius: 4px;
+            object-fit: cover;
+            flex-shrink: 0;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s ease;
+        }
+        .certificate-card img:hover {
+            transform: scale(1.05);
+        }
+        .certificate-info {
+            flex: 1;
+        }
+        .certificate-meta {
+            font-size: 0.9em;
+            color: #555;
+            margin-bottom: 0.75em;
+        }
+        .certificate-meta span {
+            display: block;
+            margin-bottom: 2px;
+        }
+        .page-navigation-links {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3em;
+        }
+        .button-link {
+            background-color: #004080;
+            color: white;
+            padding: 0.75em 1.25em;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+        .button-link:hover {
+            background-color: #0066cc;
+        }
+        footer {
+            background-color: #004080;
+            color: white;
+            padding: 1.5em 2em;
+            text-align: center;
+            margin-top: 4em;
+            font-size: 0.9em;
+        }
+        footer address {
+            font-style: normal;
+            margin: 0.5em 0;
+        }
+        footer a {
+            color: #a8c7ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
 
+        /* Modal styles for image enlargement */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0; top: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.8);
+            justify-content: center;
+            align-items: center;
+            overflow: auto;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 8px;
+            overflow: auto;
+            box-shadow: 0 0 15px rgba(255,255,255,0.3);
+        }
+        .modal-content img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .modal-close {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            color: white;
+            font-size: 2em;
+            font-weight: bold;
+            cursor: pointer;
+            user-select: none;
+            padding: 0 0.3em;
+        }
+        .modal-close:hover {
+            color: #ffdddd;
+        }
+    </style>
+</head>
 <body>
 
 <!-- ================= HEADER ================= -->
@@ -33,103 +188,355 @@
 <!-- ================= MAIN ================= -->
 <main class="container">
 
-    <!-- ================= HERO SECTION ================= -->
     <section class="hero">
         <h1>Professional Certificates</h1>
         <p class="hero-description">
             A comprehensive collection of certifications earned throughout my academic,
             professional, leadership, and social impact journey.
         </p>
-
         <div class="hero-stats">
-            <div>
-                <strong>100+</strong>
-                <span>Certificates</span>
-            </div>
-            <div>
-                <strong>10+</strong>
-                <span>Organizations</span>
-            </div>
-            <div>
-                <strong>15+</strong>
-                <span>Years of Learning</span>
-            </div>
+            <div><strong>100+</strong><span>Certificates</span></div>
+            <div><strong>10+</strong><span>Organizations</span></div>
+            <div><strong>15+</strong><span>Years of Learning</span></div>
         </div>
     </section>
 
-    <!-- ================= CERTIFICATES SECTION ================= -->
-    <section class="certificates-section" aria-label="Certificates list">
+    <!-- ================= ORGANIZED CERTIFICATES ================= -->
 
-        <!-- ===== CERTIFICATE CARD ===== -->
+    <!-- Udacity -->
+    <section class="organization" aria-label="Certificates issued by Udacity">
+        <h2>Udacity</h2>
+
         <article class="certificate-card">
-            <img src="./images/certificates/ai-fundamentals.jpg"
-                 alt="Certificate in Fundamentals of Artificial Intelligence">
-
+            <img src="./images/certificates/ai-fundamentals.jpg" alt="Fundamentals of Artificial Intelligence certificate" tabindex="0" />
             <div class="certificate-info">
-                <h2>Fundamentals of Artificial Intelligence</h2>
-
+                <h3>Fundamentals of Artificial Intelligence</h3>
                 <p class="certificate-meta">
-                    <span class="issuer">Issued by: Udacity</span><br>
-                    <span class="date">Issued: 2025</span>
+                    <span>Issued by: Udacity</span>
+                    <span>Issued: 2025</span>
                 </p>
-
-                <p class="certificate-description">
-                    Covered core AI concepts including machine learning basics,
-                    ethical AI, and real-world applications.
-                </p>
+                <p>Covered core AI concepts including machine learning basics, ethical AI, and real-world applications.</p>
             </div>
         </article>
 
-        <!-- ===== CERTIFICATE CARD ===== -->
         <article class="certificate-card">
-            <img src="./images/certificates/data-analysis.jpg"
-                 alt="Certificate in Fundamentals of Data Analysis">
-
+            <img src="./images/certificates/data-analysis.jpg" alt="Fundamentals of Data Analysis certificate" tabindex="0" />
             <div class="certificate-info">
-                <h2>Fundamentals of Data Analysis</h2>
-
+                <h3>Fundamentals of Data Analysis</h3>
                 <p class="certificate-meta">
-                    <span class="issuer">Issued by: Udacity</span><br>
-                    <span class="date">Issued: 2025</span>
+                    <span>Issued by: Udacity</span>
+                    <span>Issued: 2025</span>
                 </p>
-
-                <p class="certificate-description">
-                    Developed strong foundations in data cleaning, analysis,
-                    visualization, and data-driven decision-making.
-                </p>
+                <p>Developed strong foundations in data cleaning, analysis, visualization, and data-driven decision-making.</p>
             </div>
         </article>
-
-        <!-- ===== CERTIFICATE CARD ===== -->
-        <article class="certificate-card">
-            <img src="./images/certificates/android.jpg"
-                 alt="Certificate in Android Development Fundamentals">
-
-            <div class="certificate-info">
-                <h2>Android Development Fundamentals</h2>
-
-                <p class="certificate-meta">
-                    <span class="issuer">Issued by: Online Learning Platform</span><br>
-                    <span class="date">Issued: 2025</span>
-                </p>
-
-                <p class="certificate-description">
-                    Learned Android app structure, UI components,
-                    activities, and basic mobile app development.
-                </p>
-            </div>
-        </article>
-
-        <!-- ===== DUPLICATION NOTE ===== -->
-        <!--
-            Duplicate <article class="certificate-card">...</article>
-            for each new certificate.
-            This structure easily supports 100+ certificates.
-        -->
-
     </section>
 
-    <!-- ================= PAGE NAVIGATION ================= -->
+    <!-- TEFL School of English Language and Computer -->
+    <section class="organization" aria-label="Certificates issued by TEFL School of English Language and Computer">
+        <h2>TEFL School of English Language and Computer</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/basic-computer-skills.jpg" alt="Basic Computer Skills certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Basic Computer Skills</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: TEFL School of English Language and Computer</span>
+                    <span>Issued: September 30, 2022</span>
+                </p>
+                <p>Completed a 3-month training program covering foundational computer operations.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/english-language.jpg" alt="English Language & Academic Writing Skills certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>English Language & Academic Writing Skills</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: TEFL School of English Language and Computer</span>
+                    <span>Issued: August 2017</span>
+                </p>
+                <p>Successfully attended and completed a 10-month conversational, grammar, and academic writing skills course.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Woldia University Community Service Office -->
+    <section class="organization" aria-label="Certificates issued by Woldia University Community Service Office">
+        <h2>Woldia University Community Service Office</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/stem-outreach.jpg" alt="STEM Outreach Training certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>STEM Outreach Training</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Woldia University Community Service Office</span>
+                    <span>Issued: September 2018 (July 17 – September 6, 2018)</span>
+                </p>
+                <p>Completed the summer outreach training program under the Science, Technology, Engineering, and Mathematics (STEM) program.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- AAU-TECH / itel -->
+    <section class="organization" aria-label="Certificates issued by AAU-TECH / itel">
+        <h2>AAU-TECH / itel</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/power-up-digital-life.jpg" alt="Power Up Your Digital Life certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Power Up Your Digital Life</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: AAU-TECH / itel</span>
+                    <span>Issued: February 9, 2025 (Event held November 25–30, 2024)</span>
+                </p>
+                <p>Participated in a workshop series aimed at enhancing digital skills and boosting productivity through technology.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- e-SHE: Professional & E-Learning Development -->
+    <section class="organization" aria-label="Certificates issued by e-SHE">
+        <h2>e-SHE (Mastercard Foundation & ASU EdPlus)</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/study-effectively.jpg" alt="How to Study Effectively certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>How to Study Effectively (CE101)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+                <p>Verified Certificate of Achievement with Mastercard Foundation & ASU EdPlus.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/evaluate-resources.jpg" alt="How to Evaluate Resources certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>How to Evaluate Resources (CE102)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/set-goals.jpg" alt="Set Goals to Manage Your Time certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Set Goals to Manage Your Time (CE104)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/academic-integrity.jpg" alt="Academic Integrity certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Academic Integrity (CE105)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/keep-safe-online.jpg" alt="Keeping Yourself Safe Online certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Keeping Yourself Safe Online (CE106)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/strategies-successful-learning.jpg" alt="Strategies for Successful Online Learning certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Strategies for Successful Online Learning (DS201)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/how-to-take-course.jpg" alt="How to Take a Course certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>How to Take a Course (OEX100)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
+                </p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Menelik II Comprehensive Specialized Hospital -->
+    <section class="organization" aria-label="Certificates issued by Menelik II Comprehensive Specialized Hospital">
+        <h2>Menelik II Comprehensive Specialized Hospital</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/community-engagement-it-volunteer.jpg" alt="Community Engagement Initiative (IT Volunteer) certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Community Engagement Initiative (IT Volunteer)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
+                    <span>Issued: October 17, 2025 (August 1 – October 17, 2025)</span>
+                </p>
+                <p>Volunteered in IT department, installing networks, managing workflows, and teaching digital literacy.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/appreciation-it-engagement.jpg" alt="Certificate of Appreciation (IT & Community Engagement)" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Appreciation (IT & Community Engagement)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
+                    <span>Issued: October 1, 2025 (Volunteer period: August 1, 2025 – October 17, 2025)</span>
+                </p>
+                <p>Recognized for service installing/managing networks, digital literacy teaching, and managing workflows.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/letter-recommendation-hospital-it.jpg" alt="Letter of Recommendation (Hospital IT Department)" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Letter of Recommendation (Hospital IT Department)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
+                    <span>Issued: October 17, 2025</span>
+                </p>
+                <p>Recommended for technical proficiency and teamwork during IT volunteer service.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Dessie Special Boarding School -->
+    <section class="organization" aria-label="Certificates issued by Dessie Special Boarding School">
+        <h2>Dessie Special Boarding School</h2>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/school-volunteer-gardening.jpg" alt="School Volunteer & Gardening Service certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>School Volunteer & Gardening Service</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 30, 2023</span>
+                </p>
+                <p>Honored for dedicated volunteer service from 2020 to 2023, including contributions to garden plantation.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/student-body-president.jpg" alt="President of the Student Body certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>President of the Student Body</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 30, 2023</span>
+                </p>
+                <p>Recognized for exceptional leadership, dedication, and service as Student Body President during the 2023 term.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/music-club-president.jpg" alt="President of the Music Club certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>President of the Music Club</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 20, 2023</span>
+                </p>
+                <p>Recognized for outstanding dedication, discipline, and leadership within the school community.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/high-school-graduation.jpg" alt="High School Graduation & Academic Achievement certificate" tabindex="0" />
+            <div class="certificate-info">
+                <h3>High School Graduation & Academic Achievement</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: July 10, 2023</span>
+                </p>
+                <p>Successfully completed all requirements for preparatory education and high school graduation with great distinction.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/certificate-of-recognition-student-president.jpg" alt="Certificate of Recognition (Student Body President)" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Recognition (Student Body President)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 30, 2023</span>
+                </p>
+                <p>Awarded in recognition of exceptional leadership and dedicated service as the Student Body President during the 2023 term.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/letter-recommendation-principal.jpg" alt="Letter of Recommendation (High School Principal)" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Letter of Recommendation (High School Principal)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: August 2, 2025</span>
+                </p>
+                <p>Highlights high academic distinction, exemplary leadership, integrity, and proactive involvement in innovative school initiatives.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/certificate-recognition-music-club-president.jpg" alt="Certificate of Recognition (Music Club President)" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Recognition (Music Club President)</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 20, 2023</span>
+                </p>
+                <p>Awarded for outstanding dedication, discipline, and leadership as Music Club President.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/certificate-participation.jpg" alt="Certificate of Participation" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Participation</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                </p>
+                <p>Presented for active involvement and participation in school programs and community initiatives.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/certificate-graduation.jpg" alt="Certificate of Graduation" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Graduation</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                    <span>Issued: June 30, 2023</span>
+                </p>
+                <p>Awarded upon successful completion of secondary education requirements.</p>
+            </div>
+        </article>
+
+        <article class="certificate-card">
+            <img src="./images/certificates/certificate-achievement.jpg" alt="Certificate of Achievement" tabindex="0" />
+            <div class="certificate-info">
+                <h3>Certificate of Achievement</h3>
+                <p class="certificate-meta">
+                    <span>Issued by: Dessie Special Boarding School</span>
+                </p>
+                <p>Recognized for outstanding academic performance and active participation in school events.</p>
+            </div>
+        </article>
+    </section>
+
+    <!-- Additional organizations can be added in similar fashion -->
+
     <div class="page-navigation-links">
         <a href="Martina's_Resume.html" class="button-link">← Resume</a>
         <a href="Random_informations.html" class="button-link">More About Me →</a>
@@ -149,6 +556,72 @@
         </ul>
     </nav>
 </footer>
+
+<!-- Modal for enlarged certificate image -->
+<div id="modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
+    <span class="modal-close" role="button" aria-label="Close modal" tabindex="0">&times;</span>
+    <div class="modal-content">
+        <img id="modal-image" src="" alt="" />
+        <p id="modal-desc" style="color:#fff; padding: 0.5em 1em; max-width: 90vw;"></p>
+    </div>
+</div>
+
+<script>
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modal-image');
+    const modalDesc = document.getElementById('modal-desc');
+    const modalClose = modal.querySelector('.modal-close');
+
+    // On clicking any certificate image, open modal with image and description
+    document.querySelectorAll('.certificate-card img').forEach(img => {
+        img.addEventListener('click', () => {
+            const card = img.closest('.certificate-card');
+            const desc = card.querySelector('p:not(.certificate-meta)').textContent.trim();
+            modalImage.src = img.src;
+            modalImage.alt = img.alt;
+            modalDesc.textContent = desc;
+            modal.style.display = 'flex';
+            modalClose.focus();
+            document.body.style.overflow = 'hidden'; // prevent background scroll
+        });
+        // Also allow keyboard activation (Enter) for accessibility
+        img.addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                e.preventDefault();
+                img.click();
+            }
+        });
+    });
+
+    function closeModal() {
+        modal.style.display = 'none';
+        modalImage.src = '';
+        modalDesc.textContent = '';
+        document.body.style.overflow = '';
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalClose.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            closeModal();
+        }
+    });
+
+    // Close modal if clicking outside the modal content
+    modal.addEventListener('click', e => {
+        if (e.target === modal) {
+            closeModal();
+        }
+    });
+
+    // Close modal on Escape key
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && modal.style.display === 'flex') {
+            closeModal();
+        }
+    });
+</script>
 
 </body>
 </html>
