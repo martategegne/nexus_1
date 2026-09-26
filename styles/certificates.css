@@ -1,45 +1,4 @@
-/*  GLOBAL STYLES & RESET*/
-* {
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #fafafa;
-    color: #333333;
-    line-height: 1.6;Here is the complete, styled CSS that covers all structural requirements (Header, Hero Section, Content Cards, Modals, and Footer) while ensuring strict color consistency across the entire page using CSS Custom Properties (variables).
-
-### Complete CSS Stylesheet (`styles.css`)
-
-```css
-/* CSS Custom Properties (Color & Design Tokens)
-  */
-:root {
-    /* Primary Colors (Consistent Blue Theme) */
-    --primary-color: #004080;
-    --primary-hover: #0066cc;
-    --accent-link: #a8c7ff;
-    
-    /* Background Colors */
-    --bg-page: #fafafa;
-    --bg-card: #ffffff;
-    --bg-overlay: rgba(0, 0, 0, 0.8);
-
-    /* Text Colors */
-    --text-primary: #333333;
-    --text-muted: #555555;
-    --text-light: #ffffff;
-
-    /* Shadows & Transitions */
-    --shadow-card: 0 1px 5px rgba(0, 0, 0, 0.1);
-    --shadow-img: 0 2px 6px rgba(0, 0, 0, 0.2);
-    --shadow-modal: 0 0 15px rgba(255, 255, 255, 0.3);
-    --transition-standard: all 0.3s ease;
-}
-
-/*  Base Styles */
+/* GLOBAL STYLES AND RESET */
 * {
     box-sizing: border-box;
 }
@@ -48,19 +7,19 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--bg-page);
-    color: var(--text-primary);
+    background: #fafafa;
+    color: #333333;
     line-height: 1.6;
 }
 
 h1, h2, h3 {
-    color: var(--primary-color);
+    color: #004080;
     margin-top: 0;
 }
 
-/* Header & Main Navigation */
+/* HEADER AND MAIN NAVIGATION */
 header {
-    background-color: var(--primary-color);
+    background-color: #004080;
     padding: 1em 2em;
 }
 
@@ -75,92 +34,128 @@ nav.main-nav ul {
 
 nav.main-nav a {
     text-decoration: none;
-    color: var(--text-light);
+    color: #fff;
     font-weight: 600;
     padding: 0.4em 0.8em;
-    transition: background-color var(--transition-standard);
+    transition: background-color 0.3s ease;
 }
 
 nav.main-nav a.active,
 nav.main-nav a:hover {
-    background-color: var(--primary-hover);
+    background-color: #0066cc;
     border-radius: 4px;
 }
 
-/* Main Layout Container */
+/* MAIN LAYOUT CONTAINER */
 main.container {
     max-width: 1200px;
     margin: 2em auto;
     padding: 0 1em;
 }
 
-/* Hero Section Styles */
+/* HERO SECTION STYLING */
 section.hero {
-    background-color: var(--bg-card);
-    border-left: 5px solid var(--primary-color);
+    background: linear-gradient(135deg, #004080 0%, #00264d 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 3.5em 1.5em;
     border-radius: 8px;
-    padding: 2.5em;
     margin-bottom: 2.5em;
-    box-shadow: var(--shadow-card);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 section.hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 0.5em;
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 0.3em;
 }
 
 .hero-description {
+    max-width: 700px;
+    margin: 0 auto 2em auto;
     font-size: 1.1rem;
-    color: var(--text-muted);
-    max-width: 800px;
-    margin-bottom: 2em;
+    color: #d0e1fd;
+    line-height: 1.6;
 }
 
+/* Hero Stats Cards Layout */
 .hero-stats {
     display: flex;
-    gap: 2em;
-    border-top: 1px solid #eee;
-    padding-top: 1.5em;
+    justify-content: center;
+    gap: 1.5em;
     flex-wrap: wrap;
+    margin-top: 1.5em;
 }
 
+/* Individual Stat Cards */
 .hero-stats div {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    padding: 1.2em 1.8em;
+    border-radius: 8px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    min-width: 150px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.hero-stats div:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+/* Contextual Icons inside the Hero Cards */
+.hero-stats div:nth-child(1):before {
+    content: "📜";
+    font-size: 1.8rem;
+    margin-bottom: 0.3em;
+}
+
+.hero-stats div:nth-child(2):before {
+    content: "🏛️";
+    font-size: 1.8rem;
+    margin-bottom: 0.3em;
+}
+
+.hero-stats div:nth-child(3):before {
+    content: "⏳";
+    font-size: 1.8rem;
+    margin-bottom: 0.3em;
 }
 
 .hero-stats strong {
     font-size: 1.8rem;
-    color: var(--primary-color);
-    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 0.1em;
 }
 
 .hero-stats span {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    color: #cce0ff;
+    font-weight: 500;
 }
 
-/* Organization Sections & Certificate Cards */
+/* ORGANIZATION SECTIONS AND CERTIFICATE CARDS */
 section.organization {
     margin-bottom: 3em;
 }
 
 section.organization h2 {
-    border-bottom: 2px solid var(--primary-color);
+    border-bottom: 2px solid #004080;
     padding-bottom: 0.3em;
     margin-bottom: 1em;
 }
 
 .certificate-card {
     display: flex;
-    gap: 1.5em;
-    background-color: var(--bg-card);
+    gap: 1em;
+    background-color: #fff;
     border-radius: 6px;
-    box-shadow: var(--shadow-card);
-    padding: 1.25em;
-    margin-bottom: 1.25em;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    padding: 1em;
+    margin-bottom: 1em;
     align-items: flex-start;
 }
 
@@ -171,27 +166,21 @@ section.organization h2 {
     border-radius: 4px;
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: var(--shadow-img);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease;
 }
 
-.certificate-card img:hover,
-.certificate-card img:focus {
+.certificate-card img:hover {
     transform: scale(1.05);
-    outline: 2px solid var(--primary-hover);
 }
 
 .certificate-info {
     flex: 1;
 }
 
-.certificate-info h3 {
-    margin-bottom: 0.4em;
-}
-
 .certificate-meta {
     font-size: 0.9em;
-    color: var(--text-muted);
+    color: #555;
     margin-bottom: 0.75em;
 }
 
@@ -200,7 +189,7 @@ section.organization h2 {
     margin-bottom: 2px;
 }
 
-/* Page Navigation Links (Buttons) */
+/* PAGE NAVIGATION AND BUTTONS */
 .page-navigation-links {
     display: flex;
     justify-content: space-between;
@@ -208,24 +197,23 @@ section.organization h2 {
 }
 
 .button-link {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: #004080;
+    color: white;
     padding: 0.75em 1.25em;
     border-radius: 5px;
     text-decoration: none;
     font-weight: 600;
-    transition: background-color var(--transition-standard);
+    transition: background-color 0.3s ease;
 }
 
-.button-link:hover,
-.button-link:focus {
-    background-color: var(--primary-hover);
+.button-link:hover {
+    background-color: #0066cc;
 }
 
-/* Footer Styles*/
+/* FOOTER STYLING */
 footer {
-    background-color: var(--primary-color);
-    color: var(--text-light);
+    background-color: #004080;
+    color: white;
     padding: 1.5em 2em;
     text-align: center;
     margin-top: 4em;
@@ -240,14 +228,14 @@ footer address {
 footer .footer-nav ul {
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0.5em 0 0 0;
     display: flex;
     justify-content: center;
-    gap: 1em;
+    gap: 1.5em;
 }
 
 footer a {
-    color: var(--accent-link);
+    color: #a8c7ff;
     text-decoration: none;
 }
 
@@ -255,20 +243,21 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Modal Styles (Image Enlargement)*/
+/* MODAL STYLES */
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    left: 0;
+    left: 0; 
     top: 0;
     width: 100vw;
     height: 100vh;
-    background-color: var(--bg-overlay);
+    background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
     overflow: auto;
     padding: 2em;
+    box-sizing: border-box;
 }
 
 .modal-content {
@@ -277,7 +266,7 @@ footer a:hover {
     max-height: 90vh;
     border-radius: 8px;
     overflow: auto;
-    box-shadow: var(--shadow-modal);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
 .modal-content img {
@@ -291,7 +280,7 @@ footer a:hover {
     position: absolute;
     top: 5px;
     right: 10px;
-    color: var(--text-light);
+    color: white;
     font-size: 2em;
     font-weight: bold;
     cursor: pointer;
@@ -299,12 +288,11 @@ footer a:hover {
     padding: 0 0.3em;
 }
 
-.modal-close:hover,
-.modal-close:focus {
+.modal-close:hover {
     color: #ffdddd;
 }
 
-/*Responsive Adjustments */
+/* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .certificate-card {
         flex-direction: column;
