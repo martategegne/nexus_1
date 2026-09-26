@@ -1,354 +1,321 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+/*  GLOBAL STYLES & RESET*/
+* {
+    box-sizing: border-box;
+}
 
-    <title>Marta Tegegne Mamo | Certificates</title>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    color: #333333;
+    line-height: 1.6;Here is the complete, styled CSS that covers all structural requirements (Header, Hero Section, Content Cards, Modals, and Footer) while ensuring strict color consistency across the entire page using CSS Custom Properties (variables).
 
-    <!-- SEO -->
-    <meta name="description" content="Professional certificates earned by Marta Tegegne Mamo in software engineering, AI, data analysis, leadership, and social impact." />
-    <meta name="author" content="Marta Tegegne Mamo" />
+### Complete CSS Stylesheet (`styles.css`)
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="./style.css" />
-</head>
-<body>
+```css
+/* CSS Custom Properties (Color & Design Tokens)
+  */
+:root {
+    /* Primary Colors (Consistent Blue Theme) */
+    --primary-color: #004080;
+    --primary-hover: #0066cc;
+    --accent-link: #a8c7ff;
+    
+    /* Background Colors */
+    --bg-page: #fafafa;
+    --bg-card: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.8);
 
-<!-- ================= HEADER ================= -->
-<header>
-    <nav class="main-nav" aria-label="Main navigation">
-        <ul>
-            <li><a href="./index.html" class="nav-link">Home</a></li>
-            <li><a href="./about.html" class="nav-link">About</a></li>
-            <li><a href="./contact.html" class="nav-link">Contact</a></li>
-            <li><a href="./photos.html" class="nav-link">Gallery</a></li>
-            <li><a href="./Martina's_Resume.html" class="nav-link">Resume</a></li>
-            <li><a href="./certificates.html" class="nav-link active" aria-current="page">Certificates</a></li>
-        </ul>
-    </nav>
-</header>
+    /* Text Colors */
+    --text-primary: #333333;
+    --text-muted: #555555;
+    --text-light: #ffffff;
 
-<!-- ================= MAIN ================= -->
-<main class="container">
+    /* Shadows & Transitions */
+    --shadow-card: 0 1px 5px rgba(0, 0, 0, 0.1);
+    --shadow-img: 0 2px 6px rgba(0, 0, 0, 0.2);
+    --shadow-modal: 0 0 15px rgba(255, 255, 255, 0.3);
+    --transition-standard: all 0.3s ease;
+}
 
-    <section class="hero">
-        <h1>Professional Certificates</h1>
-        <p class="hero-description">
-            A comprehensive collection of certifications earned throughout my academic,
-            professional, leadership, and social impact journey.
-        </p>
-        <div class="hero-stats">
-            <div><strong>100+</strong><span>Certificates</span></div>
-            <div><strong>10+</strong><span>Organizations</span></div>
-            <div><strong>15+</strong><span>Years of Learning</span></div>
-        </div>
-    </section>
+/*  Base Styles */
+* {
+    box-sizing: border-box;
+}
 
-    <!-- ================= ORGANIZED CERTIFICATES ================= -->
-    <div class="certificates-section">
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    line-height: 1.6;
+}
 
-        <!-- Udacity & Online Learning -->
-        <section class="organization" aria-label="Certificates issued by Udacity">
-            <h2>Udacity & Online Learning</h2>
+h1, h2, h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/ai-fundamentals.jpg" alt="Fundamentals of Artificial Intelligence certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Fundamentals of Artificial Intelligence</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Udacity</span>
-                        <span>Issued: 2025</span>
-                    </p>
-                    <p class="certificate-description">Covered core AI concepts including machine learning basics, ethical AI, and real-world applications.</p>
-                </div>
-            </article>
+/* Header & Main Navigation */
+header {
+    background-color: var(--primary-color);
+    padding: 1em 2em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/data-analysis.jpg" alt="Fundamentals of Data Analysis certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Fundamentals of Data Analysis</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Udacity</span>
-                        <span>Issued: 2025</span>
-                    </p>
-                    <p class="certificate-description">Developed strong foundations in data cleaning, analysis, visualization, and data-driven decision-making.</p>
-                </div>
-            </article>
+nav.main-nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/android-development.jpg" alt="Android Development Fundamentals certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Android Development Fundamentals</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Online Learning Platform</span>
-                        <span>Issued: 2025</span>
-                    </p>
-                    <p class="certificate-description">Learned Android app structure, UI components, activities, and basic mobile app development.</p>
-                </div>
-            </article>
-        </section>
+nav.main-nav a {
+    text-decoration: none;
+    color: var(--text-light);
+    font-weight: 600;
+    padding: 0.4em 0.8em;
+    transition: background-color var(--transition-standard);
+}
 
-        <!-- TEFL School of English Language and Computer -->
-        <section class="organization" aria-label="Certificates issued by TEFL School of English Language and Computer">
-            <h2>TEFL School of English Language and Computer</h2>
+nav.main-nav a.active,
+nav.main-nav a:hover {
+    background-color: var(--primary-hover);
+    border-radius: 4px;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/basic-computer-skills.jpg" alt="Basic Computer Skills certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Basic Computer Skills</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: TEFL School of English Language and Computer</span>
-                        <span>Issued: September 30, 2022</span>
-                    </p>
-                    <p class="certificate-description">Completed a 3-month training program covering foundational computer operations.</p>
-                </div>
-            </article>
+/* Main Layout Container */
+main.container {
+    max-width: 1200px;
+    margin: 2em auto;
+    padding: 0 1em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/english-language.jpg" alt="English Language & Academic Writing Skills certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>English Language & Academic Writing Skills</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: TEFL School of English Language and Computer</span>
-                        <span>Issued: August 2017</span>
-                    </p>
-                    <p class="certificate-description">Successfully attended and completed a 10-month conversational, grammar, and academic writing skills course.</p>
-                </div>
-            </article>
-        </section>
+/* Hero Section Styles */
+section.hero {
+    background-color: var(--bg-card);
+    border-left: 5px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 2.5em;
+    margin-bottom: 2.5em;
+    box-shadow: var(--shadow-card);
+}
 
-        <!-- Woldia University Community Service Office -->
-        <section class="organization" aria-label="Certificates issued by Woldia University Community Service Office">
-            <h2>Woldia University Community Service Office</h2>
+section.hero h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/stem-outreach.jpg" alt="STEM Outreach Training certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>STEM Outreach Training</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Woldia University Community Service Office</span>
-                        <span>Issued: September 2018 (July 17 – September 6, 2018)</span>
-                    </p>
-                    <p class="certificate-description">Completed the summer outreach training program under the Science, Technology, Engineering, and Mathematics (STEM) program.</p>
-                </div>
-            </article>
-        </section>
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 800px;
+    margin-bottom: 2em;
+}
 
-        <!-- AAU-TECH / itel -->
-        <section class="organization" aria-label="Certificates issued by AAU-TECH / itel">
-            <h2>AAU-TECH / itel</h2>
+.hero-stats {
+    display: flex;
+    gap: 2em;
+    border-top: 1px solid #eee;
+    padding-top: 1.5em;
+    flex-wrap: wrap;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/power-up-digital-life.jpg" alt="Power Up Your Digital Life certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Power Up Your Digital Life</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: AAU-TECH / itel</span>
-                        <span>Issued: February 9, 2025 (Event held November 25–30, 2024)</span>
-                    </p>
-                    <p class="certificate-description">Participated in a workshop series aimed at enhancing digital skills and boosting productivity through technology.</p>
-                </div>
-            </article>
-        </section>
+.hero-stats div {
+    display: flex;
+    flex-direction: column;
+}
 
-        <!-- e-SHE: Professional & E-Learning Development -->
-        <section class="organization" aria-label="Certificates issued by e-SHE">
-            <h2>e-SHE (Mastercard Foundation & ASU EdPlus)</h2>
+.hero-stats strong {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    line-height: 1.2;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/study-effectively.jpg" alt="How to Study Effectively certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>How to Study Effectively (CE101)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Verified Certificate of Achievement with Mastercard Foundation & ASU EdPlus.</p>
-                </div>
-            </article>
+.hero-stats span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/evaluate-resources.jpg" alt="How to Evaluate Resources certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>How to Evaluate Resources (CE102)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Completed verified module focusing on effective digital resource evaluation.</p>
-                </div>
-            </article>
+/* Organization Sections & Certificate Cards */
+section.organization {
+    margin-bottom: 3em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/set-goals.jpg" alt="Set Goals to Manage Your Time certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Set Goals to Manage Your Time (CE104)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Learned structured goal setting and academic time management frameworks.</p>
-                </div>
-            </article>
+section.organization h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 0.3em;
+    margin-bottom: 1em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/academic-integrity.jpg" alt="Academic Integrity certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Academic Integrity (CE105)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Mastered principles of ethical scholarship and responsible research.</p>
-                </div>
-            </article>
+.certificate-card {
+    display: flex;
+    gap: 1.5em;
+    background-color: var(--bg-card);
+    border-radius: 6px;
+    box-shadow: var(--shadow-card);
+    padding: 1.25em;
+    margin-bottom: 1.25em;
+    align-items: flex-start;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/keep-safe-online.jpg" alt="Keeping Yourself Safe Online certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Keeping Yourself Safe Online (CE106)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Practiced essential cybersecurity hygiene and digital safety protocols.</p>
-                </div>
-            </article>
+.certificate-card img {
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-img);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/strategies-successful-learning.jpg" alt="Strategies for Successful Online Learning certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Strategies for Successful Online Learning (DS201)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Adapted robust approaches for remote learning engagement and productivity.</p>
-                </div>
-            </article>
+.certificate-card img:hover,
+.certificate-card img:focus {
+    transform: scale(1.05);
+    outline: 2px solid var(--primary-hover);
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/how-to-take-course.jpg" alt="How to Take a Course certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>How to Take a Course (OEX100)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: e-SHE (Verified Certificate of Achievement)</span>
-                    </p>
-                    <p class="certificate-description">Optimized course navigation and module completion strategies.</p>
-                </div>
-            </article>
-        </section>
+.certificate-info {
+    flex: 1;
+}
 
-        <!-- Menelik II Comprehensive Specialized Hospital -->
-        <section class="organization" aria-label="Certificates issued by Menelik II Comprehensive Specialized Hospital">
-            <h2>Menelik II Comprehensive Specialized Hospital</h2>
+.certificate-info h3 {
+    margin-bottom: 0.4em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/community-engagement-it-volunteer.jpg" alt="Community Engagement Initiative (IT Volunteer) certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Community Engagement Initiative (IT Volunteer)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
-                        <span>Issued: October 17, 2025 (August 1 – October 17, 2025)</span>
-                    </p>
-                    <p class="certificate-description">Volunteered in IT department, installing networks, managing workflows, and teaching digital literacy.</p>
-                </div>
-            </article>
+.certificate-meta {
+    font-size: 0.9em;
+    color: var(--text-muted);
+    margin-bottom: 0.75em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/appreciation-it-engagement.jpg" alt="Certificate of Appreciation (IT & Community Engagement)" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Certificate of Appreciation (IT & Community Engagement)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
-                        <span>Issued: October 1, 2025 (Volunteer period: August 1, 2025 – October 17, 2025)</span>
-                    </p>
-                    <p class="certificate-description">Recognized for service installing/managing networks, digital literacy teaching, and managing workflows.</p>
-                </div>
-            </article>
+.certificate-meta span {
+    display: block;
+    margin-bottom: 2px;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/letter-recommendation-hospital-it.jpg" alt="Letter of Recommendation (Hospital IT Department)" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Letter of Recommendation (Hospital IT Department)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Menelik II Comprehensive Specialized Hospital</span>
-                        <span>Issued: October 17, 2025</span>
-                    </p>
-                    <p class="certificate-description">Recommended for technical proficiency and teamwork during IT volunteer service.</p>
-                </div>
-            </article>
-        </section>
+/* Page Navigation Links (Buttons) */
+.page-navigation-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3em;
+}
 
-        <!-- Dessie Special Boarding School -->
-        <section class="organization" aria-label="Certificates issued by Dessie Special Boarding School">
-            <h2>Dessie Special Boarding School</h2>
+.button-link {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 0.75em 1.25em;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color var(--transition-standard);
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/school-volunteer-gardening.jpg" alt="School Volunteer & Gardening Service certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>School Volunteer & Gardening Service</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Dessie Special Boarding School</span>
-                        <span>Issued: June 30, 2023</span>
-                    </p>
-                    <p class="certificate-description">Honored for dedicated volunteer service from 2020 to 2023, including contributions to garden plantation.</p>
-                </div>
-            </article>
+.button-link:hover,
+.button-link:focus {
+    background-color: var(--primary-hover);
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/student-body-president.jpg" alt="President of the Student Body certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>President of the Student Body</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Dessie Special Boarding School</span>
-                        <span>Issued: June 30, 2023</span>
-                    </p>
-                    <p class="certificate-description">Recognized for exceptional leadership, dedication, and service as Student Body President during the 2023 term.</p>
-                </div>
-            </article>
+/* Footer Styles*/
+footer {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    padding: 1.5em 2em;
+    text-align: center;
+    margin-top: 4em;
+    font-size: 0.9em;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/high-school-graduation.jpg" alt="High School Graduation & Academic Achievement certificate" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>High School Graduation & Academic Achievement</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Dessie Special Boarding School</span>
-                        <span>Issued: July 10, 2023</span>
-                    </p>
-                    <p class="certificate-description">Successfully completed all requirements for preparatory education and high school graduation with great distinction.</p>
-                </div>
-            </article>
+footer address {
+    font-style: normal;
+    margin: 0.5em 0;
+}
 
-            <article class="certificate-card">
-                <img src="./images/certificates/letter-recommendation-principal.jpg" alt="Letter of Recommendation (High School Principal)" tabindex="0" />
-                <div class="certificate-info">
-                    <h2>Letter of Recommendation (High School Principal)</h2>
-                    <p class="certificate-meta">
-                        <span>Issued by: Dessie Special Boarding School</span>
-                        <span>Issued: August 2, 2025</span>
-                    </p>
-                    <p class="certificate-description">Highlights high academic distinction, exemplary leadership, integrity, and proactive involvement in innovative school initiatives.</p>
-                </div>
-            </article>
-        </section>
+footer .footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
 
-    </div>
+footer a {
+    color: var(--accent-link);
+    text-decoration: none;
+}
 
-    <div class="page-navigation-links">
-        <a href="Martina's_Resume.html" class="button-link">← Resume</a>
-        <a href="Random_informations.html" class="button-link">More About Me →</a>
-    </div>
+footer a:hover {
+    text-decoration: underline;
+}
 
-</main>
+/* Modal Styles (Image Enlargement)*/
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-overlay);
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
+    padding: 2em;
+}
 
-<!-- ================= FOOTER ================= -->
-<footer>
-    <p>&copy; 2025 Marta Tegegne Mamo. All rights reserved.</p>
-    <address>Addis Ababa, Ethiopia</address>
+.modal-content {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 8px;
+    overflow: auto;
+    box-shadow: var(--shadow-modal);
+}
 
-    <nav class="footer-nav" aria-label="Footer navigation">
-        <ul>
-            <li><a href="./contact.html">Contact</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-        </ul>
-    </nav>
-</footer>
+.modal-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
 
-</body>
-</html>
+.modal-close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    color: var(--text-light);
+    font-size: 2em;
+    font-weight: bold;
+    cursor: pointer;
+    user-select: none;
+    padding: 0 0.3em;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+    color: #ffdddd;
+}
+
+/*Responsive Adjustments */
+@media (max-width: 768px) {
+    .certificate-card {
+        flex-direction: column;
+    }
+
+    .certificate-card img {
+        width: 100%;
+        max-height: 250px;
+    }
+
+    .hero-stats {
+        gap: 1em;
+    }
+}
