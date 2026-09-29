@@ -703,6 +703,115 @@
 
        
     </section>
+    <!-- Addis Ababa University Peace Club & Stenar Trading -->
+<section class="organization featured-certificates" aria-label="Certificates issued by Addis Ababa University Peace Club">
+    <h2>Addis Ababa University Peace Club</h2>
+
+    <article class="certificate-split-card">
+        <div class="certificate-media">
+            <img src="./images/aa2.jpg" alt="Certificate of Accomplishment (Life Skills for Sustainable Peace)" tabindex="0" />
+        </div>
+        <div class="certificate-info">
+            <h3>Certificate of Accomplishment</h3>
+            <p class="certificate-meta">
+                <span>Issued by: Stenar Trading Ye'MuyaWeg Initiative in collaboration with Addis Ababa University Peace Club</span>
+                <span>Issued: March 1, 2025</span>
+            </p>
+            <p>Awarded to Marta Tegegne in recognition of successfully completing the Life Skills for Sustainable Peace training. The recipient demonstrated commitment to mindset growth, effective communication, and leadership for peacebuilding, equipping them with essential skills to foster sustainable peace.</p>
+        </div>
+    </article>
+</section>
+
+<style>
+/* Modern Split-Card Design */
+.featured-certificates {
+    margin: 2rem 0;
+}
+
+.certificate-split-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.certificate-split-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+}
+
+.certificate-media {
+    flex: 0 0 45%;
+    max-width: 45%;
+    overflow: hidden;
+    background: #f8fafc;
+    border-right: 1px solid #f1f5f9;
+}
+
+.certificate-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.certificate-split-card:hover .certificate-media img {
+    transform: scale(1.03);
+}
+
+.certificate-info {
+    flex: 1;
+    padding: 2rem;
+}
+
+.certificate-info h3 {
+    font-size: 1.35rem;
+    color: #1e293b;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.certificate-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.875rem;
+    color: #64748b;
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+.certificate-info p:last-child {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive layout for mobile screens */
+@media (max-width: 768px) {
+    .certificate-split-card {
+        flex-direction: column;
+    }
+    .certificate-media {
+        flex: 0 0 100%;
+        max-width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f1f5f9;
+        max-height: 250px;
+    }
+    .certificate-info {
+        padding: 1.5rem;
+    }
+}
+</style>
 
     <!-- Additional organizations can be added in similar fashion -->
 
