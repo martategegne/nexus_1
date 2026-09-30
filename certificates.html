@@ -1718,6 +1718,131 @@
     setupModal('annotateImg', 'annotateModal', 'annotateModalImg', 'annotateModalClose');
 </script>
 
+    <!-- Ethiopian Certificate of Recognition -->
+<section class="organization ethiopian-cert-section" aria-label="Ethiopian Certificate of Recognition">
+    <h2>የምስክር ወረቀት - Certificate of Recognition</h2>
+
+    <article class="ethiopian-cert-card">
+        <div class="ethiopian-cert-media">
+            <img id="ethiopianCertImg" src="./images/ainn.jpg" alt="Ethiopian Certificate of Recognition with Cultural Border Design" tabindex="0" title="Click to view full image" />
+        </div>
+        <div class="ethiopian-cert-content">
+            <div class="cert-tag ethiopian-tag">Community Recognition</div>
+            <h3>Certificate of Achievement</h3>
+            <p class="certificate-meta">
+                <span><strong>Recipient:</strong> Marta Tegegne Mamo (ማርታ ተገኝ ማሞ)</span>
+                <span><strong>Occasion:</strong> Children's Day Celebration (ሰኔ 9 ቀን 2009 ዓ.ም.)</span>
+                <span><strong>Issued by:</strong> Women and Children Affairs Office (ልደታ ክፍለ ከተማ ሴቶችና ህፃናት መምሪያ)</span>
+            </p>
+            <p class="cert-snippet">
+                Presented in recognition of active participation and notable contributions made toward upholding children's right to participate during the Children's Day celebration held on June 16, 2017 (Sene 9, 2009 E.C.).
+            </p>
+        </div>
+    </article>
+</section>
+
+<!-- Modal for Ethiopian Certificate -->
+<div id="ethiopianCertModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span id="ethiopianCertModalClose" class="modal-close">&times;</span>
+        <img id="ethiopianCertModalImg" src="" alt="Full Size Ethiopian Certificate" />
+    </div>
+</div>
+
+
+<!-- STYLES FOR THE ETHIOPIAN CERTIFICATE SECTION -->
+<style>
+/* Ethiopian Certificate Section Theme (Crimson & Gold Cultural Accent) */
+.ethiopian-cert-section {
+    margin: 2.5rem 0;
+}
+
+.ethiopian-cert-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(139, 0, 0, 0.08);
+    margin-bottom: 2rem;
+    overflow: hidden;
+    border: 2px solid #fef3c7;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ethiopian-cert-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(139, 0, 0, 0.12);
+}
+
+.ethiopian-cert-media {
+    flex: 0 0 42%;
+    background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ethiopian-cert-media img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease;
+}
+
+.ethiopian-cert-media img:hover {
+    transform: scale(1.02);
+}
+
+.ethiopian-cert-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.ethiopian-tag {
+    background: #fef2f2;
+    color: #991b1b;
+    border: 1px solid #fee2e2;
+}
+
+.ethiopian-cert-content h3 {
+    font-size: 1.35rem;
+    color: #450a0a;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+</style>
+
+
+<!-- JAVASCRIPT FOR ETHIOPIAN CERTIFICATE MODAL -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const img = document.getElementById('ethiopianCertImg');
+        const modal = document.getElementById('ethiopianCertModal');
+        const modalImg = document.getElementById('ethiopianCertModalImg');
+        const closeBtn = document.getElementById('ethiopianCertModalClose');
+
+        if (img && modal) {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+            });
+
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    });
+</script>
+
     <!-- Additional organizations can be added in similar fashion -->
 
     <div class="page-navigation-links">
