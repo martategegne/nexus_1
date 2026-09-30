@@ -1843,7 +1843,184 @@
     });
 </script>
 
+    <!-- SECTION: Aziba Primary and Middle School Certificates -->
+<section class="organization aziba-school-section" aria-label="Aziba Primary and Middle School Certificates">
+    <h2>አዚባ የመጀመሪያ እና መካከለኛ ደረጃ ትምህርት ቤት (Aziba Primary and Middle School, Sekota, Ethiopia)</h2>
+
+    <div class="aziba-grid">
+        <!-- Certificate 1: Innovation -->
+        <article class="aziba-card">
+            <div class="aziba-media">
+                <img id="azibaInnImg" src="./images/Azibainn.jpg" alt="Certificate of Participation in Innovation" tabindex="0" title="Click to view image" />
+            </div>
+            <div class="aziba-content">
+                <div class="cert-tag aziba-tag">የፈጠራ ስራ የምስክር ወረቀት</div>
+                <h3>Certificate of Participation in Innovation</h3>
+                <p class="certificate-meta">
+                    <span><strong>Recipient:</strong> Marta Tegegne Mamo</span>
+                    <span><strong>School Name:</strong> Aziba Primary and Middle School (Sekota, Ethiopia)</span>
+                    <span><strong>Date:</strong> February 29, 2018</span>
+                </p>
+                <p class="cert-snippet">
+                    A certificate awarded in recognition of exceptional participation and dedicated efforts in innovation, including creating a home fan, Teff seed grinder, a stone-separating machine, a stove, an egg string device, and a wheelchair for disabled persons.
+                </p>
+            </div>
+        </article>
+
+        <!-- Certificate 2: Recommendation Letter / Academic Excellence -->
+        <article class="aziba-card">
+            <div class="aziba-media">
+                <img id="azibaRecImg" src="./images/azibaR.jpg" alt="Letter of Recommendation from Aziba School" tabindex="0" title="Click to view image" />
+            </div>
+            <div class="aziba-content">
+                <div class="cert-tag aziba-tag">የምክር ደብዳቤ</div>
+                <h3>Letter of Recommendation</h3>
+                <p class="certificate-meta">
+                    <span><strong>Recipient:</strong> Marta Tegegne Mamo</span>
+                    <span><strong>School Name:</strong> Aziba Primary and Middle School (Sekota, Ethiopia)</span>
+                    <span><strong>Date:</strong> July 30, 2025</span>
+                </p>
+                <p class="cert-snippet">
+                    A formal recommendation letter highlighting her exemplary academic journey from Grade 1 through Grade 8, exceptional leadership as student president, class representative, and peace club president, alongside her ongoing voluntary guidance for students.
+                </p>
+            </div>
+        </article>
+    </div>
+</section>
+
+<!-- Modal for Aziba Innovation Certificate -->
+<div id="azibaInnModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span id="azibaInnModalClose" class="modal-close">&times;</span>
+        <img id="azibaInnModalImg" src="" alt="Full Size Aziba Innovation Certificate" />
+    </div>
+</div>
+
+<!-- Modal for Aziba Recommendation Letter -->
+<div id="azibaRecModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <span id="azibaRecModalClose" class="modal-close">&times;</span>
+        <img id="azibaRecModalImg" src="" alt="Full Size Aziba Recommendation Letter" />
+    </div>
+</div>
+
+
+<!-- STYLES FOR AZIBA SCHOOL SECTION -->
+<style>
+.aziba-school-section {
+    margin: 2.5rem 0;
+}
+
+.aziba-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.aziba-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.aziba-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.1);
+}
+
+.aziba-media {
+    flex: 0 0 38%;
+    background: linear-gradient(135deg, #334155 0%, #0f172a 100%);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.aziba-media img {
+    width: 100%;
+    max-height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.aziba-media img:hover {
+    transform: scale(1.02);
+}
+
+.aziba-content {
+    flex: 1;
+    padding: 2rem;
+}
+
+.aziba-tag {
+    background: #f1f5f9;
+    color: #334155;
+    border: 1px solid #cbd5e1;
+}
+
+.aziba-content h3 {
+    font-size: 1.35rem;
+    color: #0f172a;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .aziba-card {
+        flex-direction: column !important;
+    }
+    .aziba-media {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+</style>
+
+
+<!-- JAVASCRIPT FOR AZIBA MODALS -->
+<script>
+    function setupAzibaModal(imgId, modalId, modalImgId, closeId) {
+        const img = document.getElementById(imgId);
+        const modal = document.getElementById(modalId);
+        const modalImg = document.getElementById(modalImgId);
+        const closeBtn = document.getElementById(closeId);
+
+        if (img && modal) {
+            img.addEventListener('click', function() {
+                modal.style.display = 'flex';
+                modalImg.src = this.src;
+            });
+
+            closeBtn.addEventListener('click', function() {
+                modal.style.display = 'none';
+            });
+
+            modal.addEventListener('click', function(e) {
+                if (e.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        setupAzibaModal('azibaInnImg', 'azibaInnModal', 'azibaInnModalImg', 'azibaInnModalClose');
+        setupAzibaModal('azibaRecImg', 'azibaRecModal', 'azibaRecModalImg', 'azibaRecModalClose');
+    });
+</script>
+    
+
     <!-- Additional organizations can be added in similar fashion -->
+
+    
 
     <div class="page-navigation-links">
         <a href="Martina's_Resume.html" class="button-link">&larr; Resume</a>
